@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>grentech api 文档 | API开发文档</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="文档说明
+version:1.0
+url:path+’/api/‘+api_name
+platform:laravel+vue+vuex
+method:默认
+接口返回值默认格式:json
+接口返回值默认结构:{
+  res:true/false,
+  data:{},
+  msg:&amp;apos;错误提示或者错误代码&amp;apos;
+}
+
+
+
+update_time:’2017.03.04’
+
+
+用户注册">
+<meta property="og:type" content="article">
+<meta property="og:title" content="grentech api 文档">
+<meta property="og:url" content="http://yoursite.com/2017/03/24/grentench/index.html">
+<meta property="og:site_name" content="API开发文档">
+<meta property="og:description" content="文档说明
+version:1.0
+url:path+’/api/‘+api_name
+platform:laravel+vue+vuex
+method:默认
+接口返回值默认格式:json
+接口返回值默认结构:{
+  res:true/false,
+  data:{},
+  msg:&amp;apos;错误提示或者错误代码&amp;apos;
+}
+
+
+
+update_time:’2017.03.04’
+
+
+用户注册">
+<meta property="og:updated_time" content="2017-03-24T06:00:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="grentech api 文档">
+<meta name="twitter:description" content="文档说明
+version:1.0
+url:path+’/api/‘+api_name
+platform:laravel+vue+vuex
+method:默认
+接口返回值默认格式:json
+接口返回值默认结构:{
+  res:true/false,
+  data:{},
+  msg:&amp;apos;错误提示或者错误代码&amp;apos;
+}
+
+
+
+update_time:’2017.03.04’
+
+
+用户注册">
+  
+    <link rel="alternate" href="/atom.xml" title="API开发文档" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">API开发文档</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-grentench" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/24/grentench/" class="article-date">
+  <time datetime="2017-03-24T05:59:46.000Z" itemprop="datePublished">2017-03-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      grentech api 文档
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="文档说明"><a href="#文档说明" class="headerlink" title="文档说明"></a>文档说明</h5><ul>
+<li>version:1.0</li>
+<li>url:path+’/api/‘+api_name</li>
+<li>platform:laravel+vue+vuex</li>
+<li>method:默认</li>
+<li>接口返回值默认格式:json</li>
+<li>接口返回值默认结构:<pre><code>{
+  res:true/false,
+  data:{},
+  msg:&apos;错误提示或者错误代码&apos;
+}
+</code></pre></li>
+</ul>
+<blockquote>
+<p>update_time:’2017.03.04’</p>
+</blockquote>
+<hr>
+<h5 id="用户注册相关"><a href="#用户注册相关" class="headerlink" title="用户注册相关"></a>用户注册相关</h5><ul>
+<li><strong> 请求注册 </strong><blockquote>
+<p>api_name: register</p>
+</blockquote>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th style="text-align:center">实例</th>
+<th style="text-align:right">说明</th>
+<th style="text-align:right">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用户名</td>
+<td style="text-align:center">name</td>
+<td style="text-align:right">making</td>
+<td style="text-align:right">不能为空最长255字符</td>
+</tr>
+<tr>
+<td>邮箱</td>
+<td style="text-align:center">email</td>
+<td style="text-align:right">123@qq.com</td>
+<td style="text-align:right">不能为空，验证邮箱格式，最长255字符，验证唯一性</td>
+</tr>
+<tr>
+<td>密码</td>
+<td style="text-align:center">password</td>
+<td style="text-align:right">123456</td>
+<td style="text-align:right">不能为空，最少6位字符</td>
+</tr>
+<tr>
+<td>确认密码</td>
+<td style="text-align:center">password_confirmation</td>
+<td style="text-align:right">123456</td>
+<td style="text-align:right">不能为空，与上一条password相同</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>接口返回值</p>
+</blockquote>
+<pre><code>{
+  &quot;name&quot;: [
+    &quot;The name 必填字段.&quot;
+  ],
+  &quot;email&quot;: [
+    &quot;The email 必填字段.&quot;
+  ],
+  &quot;password&quot;: [
+    &quot;The password 必填字段.&quot;
+  ]
+}
+
+{
+  res:true,
+  data:{
+    member_id:&apos;60905&apos;,
+    nick_name:&apos;symeny&apos;,
+    login_account:&apos;18503009595&apos;,
+    avatar:&apos;&apos;,
+    point:&apos;&apos;,
+    level:&apos;&apos;,
+  }
+}
+</code></pre><h4 id="返回地址"><a href="#返回地址" class="headerlink" title="返回地址"></a>返回地址</h4><ul>
+<li>url格式：servername.com/jump?token=key&amp;secret=key</li>
+<li>例如：<a href="http://grentech.dev/jump?token=ZDPfCSeSLQYRyq0KuPBgdpBAN1aOfseFKywF2KCU$secret=b62cmlvBZJEhA5r9ZFLVU4JtzMs2P7KlcDZHYJM/0l0VZFYV" target="_blank" rel="external">http://grentech.dev/jump?token=ZDPfCSeSLQYRyq0KuPBgdpBAN1aOfseFKywF2KCU$secret=b62cmlvBZJEhA5r9ZFLVU4JtzMs2P7KlcDZHYJM/0l0VZFYV</a></li>
+</ul>
+<ul>
+<li><strong> 通过邮箱激活账号 </strong><blockquote>
+<p>api_name: verify </p>
+</blockquote>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th style="text-align:center">实例</th>
+<th style="text-align:right">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>口令</td>
+<td style="text-align:center">verify</td>
+<td style="text-align:right">alKWFc246ez1JsfvITV7YwCsL0NOtYFljmaTwUTq</td>
+</tr>
+<tr>
+<td>密码</td>
+<td style="text-align:center">secret</td>
+<td style="text-align:right">f1b8KuA7bl2JpEOHHnA0rur+AoRpjm3nFe9rMBV8v8uFc+F1</td>
+</tr>
+</tbody>
+</table>
+<pre><code>{
+&quot;res&quot;: true,
+&quot;data&quot;: {
+    &quot;token_type&quot;: &quot;Bearer&quot;,
+    &quot;expires_in&quot;: 18000,
+    &quot;access_token&quot;: &quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjA3NzFkYWEzOWJhOTc4OWY1ZDdmNzQwMTM3YzdmNWMxMzVkZDljZDZmYjAwYWIwOWY0NWQ3NjgwYjI3ZmI2MjY3MWJjOWJmZWM0NmJlNDZlIn0.eyJhdWQiOiIyMyIsImp0aSI6IjA3NzFkYWEzOWJhOTc4OWY1ZDdmNzQwMTM3YzdmNWMxMzVkZDljZDZmYjAwYWIwOWY0NWQ3NjgwYjI3ZmI2MjY3MWJjOWJmZWM0NmJlNDZlIiwiaWF0IjoxNDkwMTgxNzk0LCJuYmYiOjE0OTAxODE3OTQsImV4cCI6MTQ5MDE5OTc5NCwic3ViIjoiMjMiLCJzY29wZXMiOltdfQ.G8e3yOfwcdcJ1VsKlbaykxGex8Jcq_q79WGG6b-YxsIn9uHJ0Bgja5wXtlxLpr8bTFyIWVR_xKeOyzEu28VL1p_VTnZhUgdGbThF6Jdb7KuQbzqt4T3kzPZkbMDVWnbj80COc5zFLsI1Sxd1pII3AlRjfC9nhg_6Lq739a_Y_IUyyK60Wx9heObU5YuJwk2yU4N0YYzk0FhvQb6_WN5OVhXybnRmlPzORmOcAY7T67EadqeTwPDW2ES2UBSv0tDHCwz_-fsQYC2-fRjjHQ--0xkOSQViQgT_bAySc97NzqxYORgnQaFa4ESEIxrbDZAkrp26hc-JRsjfyeVPZu80AWQI-cjYMScfyUWOUtRyaYY9iN1jmVuntvFUxWgRIzLrSAJLcnxU-0dMn6iiy5r8iOD0Vb6WOrqfXELqsroISllsfB8enWk-c9DlYlOcWwMtA4FJQoLCTXrir6UQNWv3KX7RxC8IJiQ5TtuxX_krNqLaR0kUWnJ8gj239nKA9AWL1m2yPEIFCrNiSIBMVlSwHSEGTdoNGZG3wqJf1023lz2oECRt7fgtga5tNFbyKLBCfqzUlrZ4GZ5e9hOWaAAxrZqCpdKBc7hqeDSssZxIFNzzqt6uc6NP3SZ6xPUxPlXHiz1l9uVNXI9AukXVAAXaxFfrHviUhXP7bk4_1Hu-H6U&quot;,
+    &quot;refresh_token&quot;: &quot;vooByp8oPrK3ZQyG17sDfA5/WhKOPzAr+9EsDfQifSYTaXOXplLl03bTER1fPY4Ha5A9u5vaU47U3TC0wU+r7Fj3BgmmGQ5M6l2AVG7F8EoU5SdQh2ALiLcMXEUMNya5AiACsekyiQvF2tzp4wGnwpSkvLyFYETUh6+k8WcNJcyj9JeB6kNTGKBNPDKNo774mDcXfHn7dTxYLCtnL/sJeDdm2um1i3V6HSY6orclhV4fYacoPviZGWyFETCuSqUTGzGwcGAvZnHAKxlZWCmDmWqusuOziQuT5qG8bnYOT5TJ6azBlxiRoxcLQb+zzTqyBHWU84q0Fu4qpc78or+HLKtk3DfYK8v/BclWVS35GcTCF8EFOEeYDvdMZkkNOIOj2Fq6xVpwWr3ZtM64tChLWUifAYAC5wHycJPdPLyGe3uRXOS5V6kiilofihUtBFO07/79TqJ4CpnnL2FeruZY8EdV4+DAWco0G/usXiL+XNC8tFPz/xRjJXUJJScV19wJRkwmZhxULuNswzzu8aMgMzg1eJBMfOTxEFxz4t/1aSq+TUVj7OkoLSMOpzELTX87/D2cKYiuDFvm0yFD6lRjHXYFpik0/RvbuoZ5B6/K+y6z9yGSYf4wAg2LSbdG2KzrBv3+YV+Rf7XWK3L8TwcUpxJuqEsEUC3wJKax80zE8WA=&quot;
+},
+&quot;req&quot;: &quot;激活成功&quot;
+</code></pre><p>}</p>
+<ul>
+<li><strong> 修改用户名 </strong><blockquote>
+<p>api_name: update_user_name</p>
+</blockquote>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th style="text-align:center">实例</th>
+<th style="text-align:right">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用户id</td>
+<td style="text-align:center">member_id</td>
+<td style="text-align:right">making</td>
+</tr>
+<tr>
+<td>新用户名</td>
+<td style="text-align:center">user_name</td>
+<td style="text-align:right">123456</td>
+</tr>
+<tr>
+<td>密码</td>
+<td style="text-align:center">pwd</td>
+<td style="text-align:right">nbsp</td>
+</tr>
+<tr>
+<td>验证码</td>
+<td style="text-align:center">vcode</td>
+<td style="text-align:right">非必须</td>
+</tr>
+</tbody>
+</table>
+<pre><code>{
+  res:true,
+  data:{}
+}
+</code></pre><ul>
+<li><h4 id="商品相关"><a href="#商品相关" class="headerlink" title="商品相关"></a>商品相关</h4></li>
+</ul>
+<ul>
+<li><strong> 获取商品列表 </strong><blockquote>
+<p>api_name: get_googs_list</p>
+</blockquote>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th style="text-align:center">实例</th>
+<th style="text-align:right">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>关键字</td>
+<td style="text-align:center">kwds</td>
+<td style="text-align:right">无人机</td>
+</tr>
+<tr>
+<td>分页长度</td>
+<td style="text-align:center">10</td>
+<td style="text-align:right">必须</td>
+</tr>
+<tr>
+<td>分页码</td>
+<td style="text-align:center">2</td>
+<td style="text-align:right">必须</td>
+</tr>
+</tbody>
+</table>
+<pre><code>{
+  res:true/false,
+  data:{
+
+  }
+}
+</code></pre><ul>
+<li><strong> 获取商品详情 </strong><blockquote>
+<p>api_name:get_goods_detail</p>
+</blockquote>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th style="text-align:center">实例</th>
+<th style="text-align:right">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>商品 id</td>
+<td style="text-align:center">goods_id</td>
+<td style="text-align:right">无人机</td>
+</tr>
+</tbody>
+</table>
+<pre><code>{
+  res:true/false,
+  data:{}
+}
+</code></pre><ul>
+<li><strong> 获取品类 </strong><blockquote>
+<p>api_name:get_category_list</p>
+</blockquote>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th style="text-align:center">实例</th>
+<th style="text-align:right">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>品牌 id</td>
+<td style="text-align:center">1</td>
+<td style="text-align:right">品牌</td>
+</tr>
+</tbody>
+</table>
+<pre><code>{
+  res:,
+  data:{}
+}
+</code></pre><ul>
+<li><strong> 获取收藏商品  </strong><blockquote>
+<p>api_name:get_fav_goods</p>
+</blockquote>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th style="text-align:center">实例</th>
+<th style="text-align:right">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>member_id</td>
+<td style="text-align:center">60905</td>
+<td style="text-align:right">必须</td>
+</tr>
+</tbody>
+</table>
+<pre><code>{
+  res:true/false,
+  data:{
+
+  }
+}
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/03/24/grentench/" data-id="cj0ngg0g900002ctt7ceedmyx" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/03/24/grentench/">grentech api 文档</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 yingerfashion<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
