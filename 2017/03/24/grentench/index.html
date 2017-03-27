@@ -45,7 +45,7 @@ update_time:’2017.03.04’
 
 
 用户注册">
-<meta property="og:updated_time" content="2017-03-27T06:47:06.000Z">
+<meta property="og:updated_time" content="2017-03-27T06:54:35.366Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="grentech api 文档">
 <meta name="twitter:description" content="文档说明
@@ -198,30 +198,32 @@ update_time:’2017.03.04’
 <blockquote>
 <p>接口返回值</p>
 </blockquote>
-<pre><code>{
-  &quot;name&quot;: [
-    &quot;The name 必填字段.&quot;
-  ],
-  &quot;email&quot;: [
-    &quot;The email 必填字段.&quot;
-  ],
-  &quot;password&quot;: [
-    &quot;The password 必填字段.&quot;
-  ]
-}
+<pre><code>    {
+      &quot;name&quot;: [
+        &quot;The name 必填字段.&quot;
+      ],
+      &quot;email&quot;: [
+        &quot;The email 必填字段.&quot;
+      ],
+      &quot;password&quot;: [
+        &quot;The password 必填字段.&quot;
+      ]
+    }
 
-{
-  res:true,
-  data:{
-    member_id:&apos;60905&apos;,
-    nick_name:&apos;symeny&apos;,
-    login_account:&apos;18503009595&apos;,
-    avatar:&apos;&apos;,
-    point:&apos;&apos;,
-    level:&apos;&apos;,
-  }
-}
-</code></pre><h4 id="返回地址"><a href="#返回地址" class="headerlink" title="返回地址"></a>返回地址</h4><ul>
+      {
+&quot;res&quot;: true,
+&quot;data&quot;: {
+  &quot;token_type&quot;: &quot;Bearer&quot;,
+  &quot;expires_in&quot;: 17999,
+  &quot;access_token&quot;: &quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNkOGVmYjcyNWVlYjRiMjIwYzVkODRhZjYwYWFiZThmOWJiYTEwOGMwNzZiMWNhMTUwM2MxZDE0MWEzZTcyNDg4NGIxYmFmMzZjOTZjZDAxIn0.eyJhdWQiOiIyNyIsImp0aSI6ImNkOGVmYjcyNWVlYjRiMjIwYzVkODRhZjYwYWFiZThmOWJiYTEwOGMwNzZiMWNhMTUwM2MxZDE0MWEzZTcyNDg4NGIxYmFmMzZjOTZjZDAxIiwiaWF0IjoxNDkwNTk3NjM1LCJuYmYiOjE0OTA1OTc2MzUsImV4cCI6MTQ5MDYxNTYzNCwic3ViIjoiMzEiLCJzY29wZXMiOltdfQ.WD-xjMGobVZjjw1a4ng2BgstnLagSQv2omEqmzbeTqgWGZ-bJfDePfiqI9Jks5Bvuc6gSG2zFvDbIpp4hrdg1zY_0FI7IGCoAqmtcP0lVAVpY_bPmDUPf68tBk5kKRG6tX7sB9dxrUyAVo37x0r3i5qUphZhzoqlKmE1WTaUCOtrobV1dCMqdXdgfP7n66qZKuz2EGgwmejhFQrkaUge2XUXrGgKPc6IPDJqZ0qnfBRgo0eBeGTl6Z0BmYM7R_iBRgffJnxM3fTxiWx3E9SlQ_4Xg3zxp91586v39rJ8WL3-oYtcGum0t75o9Fip_lLNYo-JpgI41bVd9uiJp5LDV4WXT7Z0WJTckMMCP3pcuMKOB4wr8bX3Bd8EdnbX-s9sEHjYvegkcZMPdUZx2618Daj5OTAVkXJCKijnrxSR_ewF2oGPxNWyeGRzbaS58uW3M3SZ6VgI_FCKpCY6_PZMXG9SITKQsIulaVBe04dRvlKLkj4TioEM7AxY5Pb53jY5chbcEdqr3YbHjLHzOKzUKsR96C5P2HE4UGmIF-sOjWcQR73iv8zSi9840UDUzH6IVIWw19jhjZfhVeF6hGDwbv_dqb05Ka6AQeX2z9w91p6BeJ7zbYTW1OZYFJutLH7eftYk6-pJupLSDAlq9PM4cDAYFPOPY4wLsWxgg-l3eSM&quot;,
+  &quot;refresh_token&quot;: &quot;E2/AtJG+OyOB3wC0H6TWBJ5gisNrlSc9OQ4JI/qinyDXRkT9tmWu8zXZgph68J1Yg7HUujM4ZFjYUDDypnrHTWhat+mxt0KiY0yC/1fpU2zyI59WoQ9bBydrsdnSt/gpDxNRnVzWR1uPbo1vSmmvdHoEUJ6c69NZNOhjnKUPfppZikocMxZ5qQ6OdDgrt22a6/sgIvKB5RnjS1iM4pi6D5PTea+jwzmzHFMr/DJ6cZriIflI+YGHzSPDW4dzQudh78+vJzi4TXmZvpmbMvJbErqB3WMZjY5UtJGwhrGAhQIRLPPRqObUUM6uenOoASrgW6YxS+A/J5yIHQQSF8a1sBIB4UL97+WjhCH7rSlbDJqmPC/jTNap3yn9irY1lAzaxMyb1uSTO6uya/Q4SPfWn2wt/hKJ7U04V2hMIQmpS4nN4IfZ7QhicYtiwlEaf+5w7RvJeSftA/OOcGLzyY0R5tjZ5+OOcY4YSpunuV31+7wunO5a5svKpo0JXcGrLB96kpAjfOpGJwynRVMpcbOZElomChdDFS5MllfiwbTmqIDfAwAYe2iGP/3/LHy7A9aPLJFJm+DjLOoXGOq7NLcsgaklj5g+Xk6BwxfP0bsXOboVwekHdUvFfmQvoyY58qxBqaRK7JzFDQgjH789ACF47g2A6PSS1gHaq0pl0gIUdsk=&quot;,
+  &quot;service_time&quot;: 1490597635,
+  &quot;client_id&quot;: 27,
+  &quot;client_secret&quot;: &quot;01b3ba6f1fb31460df52e22f337b7c14&quot;
+},
+&quot;req&quot;: &quot;激活成功&quot;
+</code></pre><p>  }</p>
+<h4 id="返回地址"><a href="#返回地址" class="headerlink" title="返回地址"></a>返回地址</h4><ul>
 <li>url格式：servername.com/jump?token=key&amp;secret=key</li>
 <li>例如：<a href="http://grentech.dev/jump?token=ZDPfCSeSLQYRyq0KuPBgdpBAN1aOfseFKywF2KCU$secret=b62cmlvBZJEhA5r9ZFLVU4JtzMs2P7KlcDZHYJM/0l0VZFYV" target="_blank" rel="external">http://grentech.dev/jump?token=ZDPfCSeSLQYRyq0KuPBgdpBAN1aOfseFKywF2KCU$secret=b62cmlvBZJEhA5r9ZFLVU4JtzMs2P7KlcDZHYJM/0l0VZFYV</a></li>
 </ul>
@@ -473,7 +475,7 @@ update_time:’2017.03.04’
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/24/grentench/" data-id="cj0rr1chv0000mwtt0hc1ql3u" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/24/grentench/" data-id="cj0rrdnuv00001cttktl7qyq6" class="article-share-link">Share</a>
       
       
     </footer>
