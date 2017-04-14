@@ -64,6 +64,178 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-db" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/14/db/" class="article-date">
+  <time datetime="2017-04-14T05:20:30.000Z" itemprop="datePublished">2017-04-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/14/db/">db</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="文档说明"><a href="#文档说明" class="headerlink" title="文档说明"></a>文档说明</h5><ul>
+<li><strong> 用户表 </strong><blockquote>
+<p>user</p>
+</blockquote>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th style="text-align:left">类型/长度</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td style="text-align:left">int(10)</td>
+<td style="text-align:left">user表主键</td>
+</tr>
+<tr>
+<td>name</td>
+<td style="text-align:left">varchar(50)</td>
+<td style="text-align:left">用户名称</td>
+</tr>
+<tr>
+<td>password</td>
+<td style="text-align:left">varchar(50)</td>
+<td style="text-align:left">用户密码</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>update_time:’2017.04.14’</p>
+</blockquote>
+<hr>
+<ul>
+<li><strong> 用户基本信息表 </strong><blockquote>
+<p>member_datas</p>
+</blockquote>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th style="text-align:left">类型/长度</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>member_id</td>
+<td style="text-align:left">int(10)</td>
+<td style="text-align:left">主键</td>
+</tr>
+<tr>
+<td>member_lv_id</td>
+<td style="text-align:left">int(10)</td>
+<td style="text-align:left">用户等级关联字段</td>
+</tr>
+<tr>
+<td>point</td>
+<td style="text-align:left">int(11)</td>
+<td style="text-align:left">用户积分</td>
+</tr>
+<tr>
+<td>firstname</td>
+<td style="text-align:left">varchar(50)</td>
+<td style="text-align:left">名字</td>
+</tr>
+<tr>
+<td>lastname</td>
+<td style="text-align:left">varchar(50)</td>
+<td style="text-align:left">姓氏</td>
+</tr>
+<tr>
+<td>area</td>
+<td style="text-align:left">varchar(255)</td>
+<td style="text-align:left">区域</td>
+</tr>
+<tr>
+<td>addr</td>
+<td style="text-align:left">varchar(255)</td>
+<td style="text-align:left">地址</td>
+</tr>
+<tr>
+<td>mobile</td>
+<td style="text-align:left">varchar(200)</td>
+<td style="text-align:left">电子邮箱</td>
+</tr>
+<tr>
+<td>b_year</td>
+<td style="text-align:left">smallint(5)</td>
+<td style="text-align:left">年</td>
+</tr>
+<tr>
+<td>b_month</td>
+<td style="text-align:left">tinyint(1)</td>
+<td style="text-align:left">月</td>
+</tr>
+<tr>
+<td>b_day</td>
+<td style="text-align:left">tinyint(1)</td>
+<td style="text-align:left">天</td>
+</tr>
+<tr>
+<td>sex</td>
+<td style="text-align:left">enum(‘0’,’1’,’2’)</td>
+<td style="text-align:left">性别 0、保密1、男,2、女</td>
+</tr>
+<tr>
+<td>advance</td>
+<td style="text-align:left">decimal(20)</td>
+<td style="text-align:left">会员账户余额</td>
+</tr>
+<tr>
+<td>experience</td>
+<td style="text-align:left">int(11)</td>
+<td style="text-align:left">经验值</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td style="text-align:left">timestamp</td>
+<td style="text-align:left">创建</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td style="text-align:left">timestamp</td>
+<td style="text-align:left">更新</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>update_time:’2017.04.14’</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/14/db/" data-id="cj1hejn8400015ottwnr51iaq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-grentench" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/03/24/grentench/" class="article-date">
@@ -475,7 +647,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/24/grentench/" data-id="cj1haebsb00008wttkeyttquj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/24/grentench/" data-id="cj1hejn7z00005ott3dkbr930" class="article-share-link">Share</a>
       
       
     </footer>
@@ -502,7 +674,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li></ul>
     </div>
   </div>
 
@@ -513,6 +685,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/04/14/db/">db</a>
+          </li>
         
           <li>
             <a href="/2017/03/24/grentench/">grentech api 文档</a>
