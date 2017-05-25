@@ -64,6 +64,197 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-yinger-card" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/25/yinger-card/" class="article-date">
+  <time datetime="2017-05-25T06:58:32.000Z" itemprop="datePublished">2017-05-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/25/yinger-card/">yinger_card</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="文档说明"><a href="#文档说明" class="headerlink" title="文档说明"></a>文档说明</h5><ul>
+<li><strong> 用户表 </strong><blockquote>
+<p>user</p>
+</blockquote>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th style="text-align:left">类型/长度</th>
+<th style="text-align:left">非必须</th>
+<th style="text-align:left">事例</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>res</td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">返回json字符串</td>
+</tr>
+<tr>
+<td>rsp</td>
+<td style="text-align:left">obj</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">返回结果状态</td>
+</tr>
+<tr>
+<td>cpns_id</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">6</td>
+<td style="text-align:left">优惠ID是该类型卡的号码</td>
+</tr>
+<tr>
+<td>prefix</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“Baaaa”</td>
+<td style="text-align:left">优惠码前缀</td>
+</tr>
+<tr>
+<td>coupon_total_number</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“10”</td>
+<td style="text-align:left">优惠库存</td>
+</tr>
+<tr>
+<td>cpns_name</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“满100减10元”</td>
+<td style="text-align:left">优惠券名称</td>
+</tr>
+<tr>
+<td>description</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“卡券优惠活动描述”</td>
+<td style="text-align:left">优惠券描述</td>
+</tr>
+<tr>
+<td>start_time</td>
+<td style="text-align:left">time</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">1495382400</td>
+<td style="text-align:left">优惠券开始时间(时间戳)</td>
+</tr>
+<tr>
+<td>end_time</td>
+<td style="text-align:left">time</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">1498233600</td>
+<td style="text-align:left">优惠券截止时间(时间戳)</td>
+</tr>
+<tr>
+<td>brands</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“1”,”2”,”3”</td>
+<td style="text-align:left">品牌 1:音儿2:恩裳3:诗篇4:歌中歌5:奥丽嘉朵6:十二篮7:诗篇蓝标8:音儿蓝标9:恩裳蓝标</td>
+</tr>
+<tr>
+<td>is_allow_aftersale</td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">是否允许售后</td>
+</tr>
+<tr>
+<td>activity_start_allow</td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">N</td>
+<td style="text-align:left">“”</td>
+<td style="text-align:left">允许售后(活动开始后) 0表示不允许该售后方式</td>
+</tr>
+<tr>
+<td>activity_finish_allow</td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">N</td>
+<td style="text-align:left">“”</td>
+<td style="text-align:left">允许售后(活动结束后) 0表示不允许该售后方式</td>
+</tr>
+<tr>
+<td>condition</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">活动条件</td>
+</tr>
+<tr>
+<td>operator</td>
+<td style="text-align:left">sting</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“&gt;=”</td>
+<td style="text-align:left">符号</td>
+</tr>
+<tr>
+<td>value</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“100”</td>
+<td style="text-align:left">当订单总额满100时，将享受优惠方案。当value为0时对所有订单给予优惠</td>
+</tr>
+<tr>
+<td>action_solution</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">优惠方案</td>
+</tr>
+<tr>
+<td>action_total_amount</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left">该订单享有10元优惠</td>
+</tr>
+<tr>
+<td>percent</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">50</td>
+<td style="text-align:left">订单优惠享有50%优惠</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>update_time:’2017.04.14’</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/05/25/yinger-card/" data-id="cj344i4v600001ott3au672y6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-db" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/04/14/db/" class="article-date">
@@ -226,7 +417,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/14/db/" data-id="cj1hejn8400015ottwnr51iaq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/04/14/db/" data-id="cj344i4vd00011ottbukt9eov" class="article-share-link">Share</a>
       
       
     </footer>
@@ -647,7 +838,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/24/grentench/" data-id="cj1hejn7z00005ott3dkbr930" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/24/grentench/" data-id="cj344i4vh00021ott55axicl5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -674,7 +865,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li></ul>
     </div>
   </div>
 
@@ -685,6 +876,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/05/25/yinger-card/">yinger_card</a>
+          </li>
         
           <li>
             <a href="/2017/04/14/db/">db</a>
