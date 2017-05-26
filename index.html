@@ -111,7 +111,7 @@
 <td style="text-align:left">返回json字符串</td>
 </tr>
 <tr>
-<td>rsp</td>
+<td>data</td>
 <td style="text-align:left">obj</td>
 <td style="text-align:left">Y</td>
 <td style="text-align:left">-</td>
@@ -242,40 +242,12 @@
 <p>接口返回值</p>
 </blockquote>
 <pre><code>{
-    &quot;rsp&quot;: true,
-    &quot;res&quot;: [
-        {
-            &quot;cpns_id&quot;: &quot;4&quot;,
-            &quot;prefix&quot;: &quot;B98976979&quot;,
-            &quot;coupon_total_number&quot;: &quot;5&quot;,
-            &quot;cpns_name&quot;: &quot;优惠券（买二增一）&quot;,
-            &quot;description&quot;: &quot;满2件赠送马克杯&quot;,
-            &quot;start_time&quot;: 1459440000,
-            &quot;end_time&quot;: 1460736000,
-            &quot;brands&quot;: [
-                &quot;2&quot;,
-                &quot;3&quot;
-            ],
-            &quot;is_allow_aftersale&quot;: &quot;0&quot;,
-            &quot;activity_start_allow&quot;: &quot;&quot;,
-            &quot;activity_finish_allow&quot;: &quot;&quot;,
-            &quot;condition&quot;: {
-                &quot;type&quot;: &quot;b2c_sales_order_item_order&quot;,
-                &quot;attribute&quot;: &quot;order_subtotal&quot;,
-                &quot;operator&quot;: &quot;&gt;=&quot;,
-                &quot;value&quot;: &quot;0&quot;
-            },
-            &quot;action_solution&quot;: {
-                &quot;b2c_promotion_solutions_byfixed&quot;: {
-                    &quot;type&quot;: &quot;order&quot;,
-                    &quot;total_amount&quot;: &quot;100&quot;
-                }
-            }
-        },
+    &quot;rsp&quot;: &quot;succ&quot;,
+    &quot;data&quot;: [
         {
             &quot;cpns_id&quot;: &quot;6&quot;,
             &quot;prefix&quot;: &quot;Baaaa&quot;,
-            &quot;coupon_total_number&quot;: &quot;10&quot;,
+            &quot;coupon_total_number&quot;: &quot;1000&quot;,
             &quot;cpns_name&quot;: &quot;优惠券名称&quot;,
             &quot;description&quot;: &quot;我是描述1&quot;,
             &quot;start_time&quot;: 1495382400,
@@ -292,22 +264,26 @@
                 &quot;12&quot;
             ],
             &quot;is_allow_aftersale&quot;: &quot;1&quot;,
-            &quot;activity_start_allow&quot;: &quot;0&quot;,
-            &quot;activity_finish_allow&quot;: &quot;1&quot;,
+            &quot;activity_start_allow&quot;: &quot;&quot;,
+            &quot;activity_finish_allow&quot;: &quot;&quot;,
             &quot;condition&quot;: {
                 &quot;type&quot;: &quot;b2c_sales_order_item_order&quot;,
                 &quot;attribute&quot;: &quot;order_subtotal&quot;,
                 &quot;operator&quot;: &quot;&gt;=&quot;,
                 &quot;value&quot;: &quot;1000&quot;
             },
+            &quot;availableInventory&quot;: 981,
+            &quot;isUseCount&quot;: 34,
             &quot;action_solution&quot;: {
                 &quot;b2c_promotion_solutions_topercent&quot;: {
                     &quot;type&quot;: &quot;order&quot;,
                     &quot;percent&quot;: &quot;50&quot;
                 }
-            }
+            },
+            &quot;&amp;index&amp;&quot;: 0
         }
-    ]
+    ],
+    &quot;res&quot;: &quot;&quot;
 }
 </code></pre><blockquote>
 <p>update_time:’2017.04.14’</p>
@@ -332,7 +308,7 @@
 <tr>
 <td>phone</td>
 <td style="text-align:left">string</td>
-<td style="text-align:left">Y</td>
+<td style="text-align:left">N</td>
 <td style="text-align:left">13981872077</td>
 <td style="text-align:left">手机号</td>
 </tr>
@@ -377,12 +353,14 @@
 <p>结果</p>
 </blockquote>
 <pre><code>{
-    &quot;res&quot;: true,
-    &quot;code&quot;: &quot;100001&quot;,
-    &quot;msg&quot;: &quot;当前有 993 张卡券可领取，已有 22 张卡券已领取&quot;,
-    &quot;availableInventory&quot;: 993,
-    &quot;isUseCount&quot;: 22,
-    &quot;cardNo&quot;: &quot;Baaaa4A5E900LIB&quot;
+    &quot;rsp&quot;: &quot;succ&quot;,
+    &quot;data&quot;: {
+        &quot;msg&quot;: &quot;当前有 980 张卡券可领取，已有 35 张卡券已领取&quot;,
+        &quot;availableInventory&quot;: 980,
+        &quot;isUseCount&quot;: 35,
+        &quot;cardNo&quot;: &quot;Baaaa5CBF000LHY&quot;
+    },
+    &quot;res&quot;: &quot;&quot;
 }
 </code></pre><table>
 <thead>
@@ -395,11 +373,11 @@
 <tbody>
 <tr>
 <td>res</td>
-<td style="text-align:left">bool</td>
+<td style="text-align:left">string</td>
 <td style="text-align:left">返回状态</td>
 </tr>
 <tr>
-<td>res</td>
+<td>data</td>
 <td style="text-align:left">string</td>
 <td style="text-align:left">返回消息</td>
 </tr>
@@ -427,7 +405,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/25/yinger-card/" data-id="cj355654w00021wttv4mhxnq8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/25/yinger-card/" data-id="cj35814kb0002s8tt93buf1vk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -599,7 +577,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/14/db/" data-id="cj355654u00011wtt6jwxbonq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/04/14/db/" data-id="cj35814k90001s8ttn7pds35g" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1020,7 +998,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/24/grentench/" data-id="cj355654p00001wttzp7mta4w" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/24/grentench/" data-id="cj35814k40000s8tt6mk5b3y5" class="article-share-link">Share</a>
       
       
     </footer>
