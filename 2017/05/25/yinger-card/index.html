@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="文档说明
  获取所有优惠券基础信息 
-getCardList 请求get
+请求类型 GET
+wap2.card.getCardList
 
 
 
@@ -44,21 +45,19 @@ Y
 优惠ID是该类型卡的号码
 
 
-prefix
+cpns_type_name
 string
 Y
-“Baaaa”
-优惠码前缀
-
-
-coupon_total_number">
+全场满100立即1
+卡券类型名">
 <meta property="og:type" content="article">
 <meta property="og:title" content="yinger_card">
 <meta property="og:url" content="http://yoursite.com/2017/05/25/yinger-card/index.html">
 <meta property="og:site_name" content="API开发文档">
 <meta property="og:description" content="文档说明
  获取所有优惠券基础信息 
-getCardList 请求get
+请求类型 GET
+wap2.card.getCardList
 
 
 
@@ -95,20 +94,18 @@ Y
 优惠ID是该类型卡的号码
 
 
-prefix
+cpns_type_name
 string
 Y
-“Baaaa”
-优惠码前缀
-
-
-coupon_total_number">
-<meta property="og:updated_time" content="2017-05-26T07:38:34.649Z">
+全场满100立即1
+卡券类型名">
+<meta property="og:updated_time" content="2017-05-26T08:47:46.238Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="yinger_card">
 <meta name="twitter:description" content="文档说明
  获取所有优惠券基础信息 
-getCardList 请求get
+请求类型 GET
+wap2.card.getCardList
 
 
 
@@ -145,14 +142,11 @@ Y
 优惠ID是该类型卡的号码
 
 
-prefix
+cpns_type_name
 string
 Y
-“Baaaa”
-优惠码前缀
-
-
-coupon_total_number">
+全场满100立即1
+卡券类型名">
   
     <link rel="alternate" href="/atom.xml" title="API开发文档" type="application/atom+xml">
   
@@ -224,8 +218,9 @@ coupon_total_number">
     <div class="article-entry" itemprop="articleBody">
       
         <h5 id="文档说明"><a href="#文档说明" class="headerlink" title="文档说明"></a>文档说明</h5><ul>
-<li><strong> 获取所有优惠券基础信息 </strong><blockquote>
-<p>getCardList 请求get</p>
+<li><strong> 获取所有优惠券基础信息 </strong></li>
+<li>请求类型 GET<blockquote>
+<p>wap2.card.getCardList</p>
 </blockquote>
 </li>
 </ul>
@@ -260,6 +255,13 @@ coupon_total_number">
 <td style="text-align:left">Y</td>
 <td style="text-align:left">6</td>
 <td style="text-align:left">优惠ID是该类型卡的号码</td>
+</tr>
+<tr>
+<td>cpns_type_name</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">全场满100立即1</td>
+<td style="text-align:left">卡券类型名称</td>
 </tr>
 <tr>
 <td>prefix</td>
@@ -373,6 +375,13 @@ coupon_total_number">
 <td style="text-align:left">50</td>
 <td style="text-align:left">订单优惠享有50%优惠</td>
 </tr>
+<tr>
+<td>condition_type</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">0为指定商品有效 1为全场有效</td>
+</tr>
 </tbody>
 </table>
 <blockquote>
@@ -403,82 +412,85 @@ coupon_total_number">
 <p>接口返回值</p>
 </blockquote>
 <pre><code>{
-   &quot;rsp&quot;: &quot;succ&quot;,
-   &quot;data&quot;: [
-       {
-           &quot;cpns_id&quot;: &quot;4&quot;,
-           &quot;prefix&quot;: &quot;B98976979&quot;,
-           &quot;coupon_total_number&quot;: &quot;5&quot;,
-           &quot;cpns_name&quot;: &quot;优惠券（买二增一）&quot;,
-           &quot;description&quot;: &quot;满2件赠送马克杯&quot;,
-           &quot;start_time&quot;: 1459440000,
-           &quot;end_time&quot;: 1460736000,
-           &quot;brands&quot;: [
-               &quot;2&quot;,
-               &quot;3&quot;
-           ],
-           &quot;is_allow_aftersale&quot;: &quot;0&quot;,
-           &quot;activity_start_allow&quot;: &quot;0&quot;,
-           &quot;activity_finish_allow&quot;: &quot;0&quot;,
-           &quot;condition&quot;: {
-               &quot;type&quot;: &quot;b2c_sales_order_item_order&quot;,
-               &quot;attribute&quot;: &quot;order_subtotal&quot;,
-               &quot;operator&quot;: &quot;&gt;=&quot;,
-               &quot;value&quot;: &quot;0&quot;
-           },
-           &quot;availableInventory&quot;: 5,
-           &quot;isUseCount&quot;: 13,
-           &quot;type&quot;: 1,
-           &quot;action_solution&quot;: {
-               &quot;type&quot;: &quot;order&quot;,
-               &quot;total_amount&quot;: &quot;100&quot;
-           }
-       },
-       {
-           &quot;cpns_id&quot;: &quot;6&quot;,
-           &quot;prefix&quot;: &quot;Baaaa&quot;,
-           &quot;coupon_total_number&quot;: &quot;1000&quot;,
-           &quot;cpns_name&quot;: &quot;优惠券名称&quot;,
-           &quot;description&quot;: &quot;我是描述1&quot;,
-           &quot;start_time&quot;: 1495382400,
-           &quot;end_time&quot;: 1498233600,
-           &quot;brands&quot;: [
-               &quot;1&quot;,
-               &quot;2&quot;,
-               &quot;3&quot;,
-               &quot;7&quot;,
-               &quot;8&quot;,
-               &quot;9&quot;,
-               &quot;10&quot;,
-               &quot;11&quot;,
-               &quot;12&quot;
-           ],
-           &quot;is_allow_aftersale&quot;: &quot;1&quot;,
-           &quot;activity_start_allow&quot;: &quot;0&quot;,
-           &quot;activity_finish_allow&quot;: &quot;0&quot;,
-           &quot;condition&quot;: {
-               &quot;type&quot;: &quot;b2c_sales_order_item_order&quot;,
-               &quot;attribute&quot;: &quot;order_subtotal&quot;,
-               &quot;operator&quot;: &quot;&gt;=&quot;,
-               &quot;value&quot;: &quot;1000&quot;
-           },
-           &quot;availableInventory&quot;: 1000,
-           &quot;isUseCount&quot;: 49,
-           &quot;type&quot;: 1,
-           &quot;action_solution&quot;: {
-               &quot;type&quot;: &quot;order&quot;,
-               &quot;total_amount&quot;: &quot;12&quot;
-           }
-       }
-   ],
-   &quot;res&quot;: &quot;&quot;
+    &quot;rsp&quot;: &quot;succ&quot;,
+    &quot;data&quot;: [
+        {
+            &quot;cpns_id&quot;: &quot;4&quot;,
+            &quot;prefix&quot;: &quot;B98976979&quot;,
+            &quot;coupon_total_number&quot;: &quot;5&quot;,
+            &quot;cpns_name&quot;: &quot;优惠券（买二增一）&quot;,
+            &quot;description&quot;: &quot;满2件赠送马克杯&quot;,
+            &quot;start_time&quot;: 1459440000,
+            &quot;end_time&quot;: 1460736000,
+            &quot;brands&quot;: [
+                &quot;2&quot;,
+                &quot;3&quot;
+            ],
+            &quot;is_allow_aftersale&quot;: &quot;0&quot;,
+            &quot;activity_start_allow&quot;: &quot;0&quot;,
+            &quot;activity_finish_allow&quot;: &quot;0&quot;,
+            &quot;condition&quot;: {
+                &quot;type&quot;: &quot;b2c_sales_order_item_order&quot;,
+                &quot;attribute&quot;: &quot;order_subtotal&quot;,
+                &quot;operator&quot;: &quot;&gt;=&quot;,
+                &quot;value&quot;: &quot;0&quot;
+            },
+            &quot;availableInventory&quot;: 5,
+            &quot;isUseCount&quot;: 13,
+            &quot;type&quot;: 1,
+            &quot;action_solution&quot;: {
+                &quot;type&quot;: &quot;order&quot;,
+                &quot;total_amount&quot;: &quot;100&quot;
+            }
+        },
+        {
+            &quot;cpns_id&quot;: &quot;6&quot;,
+            &quot;prefix&quot;: &quot;Baaaa&quot;,
+            &quot;coupon_total_number&quot;: &quot;4&quot;,
+            &quot;cpns_name&quot;: &quot;优惠券名称&quot;,
+            &quot;cpns_type_name&quot;: &quot;类型&quot;,
+            &quot;description&quot;: &quot;我是描述1&quot;,
+            &quot;start_time&quot;: 1495382400,
+            &quot;end_time&quot;: 1498233600,
+            &quot;brands&quot;: [
+                &quot;1&quot;,
+                &quot;2&quot;,
+                &quot;3&quot;,
+                &quot;7&quot;,
+                &quot;8&quot;,
+                &quot;9&quot;,
+                &quot;10&quot;,
+                &quot;11&quot;,
+                &quot;12&quot;
+            ],
+            &quot;is_allow_aftersale&quot;: &quot;1&quot;,
+            &quot;activity_start_allow&quot;: &quot;0&quot;,
+            &quot;activity_finish_allow&quot;: &quot;0&quot;,
+            &quot;condition&quot;: {
+                &quot;type&quot;: &quot;b2c_sales_order_item_order&quot;,
+                &quot;attribute&quot;: &quot;order_subtotal&quot;,
+                &quot;operator&quot;: &quot;&gt;=&quot;,
+                &quot;value&quot;: &quot;0&quot;
+            },
+            &quot;availableInventory&quot;: 4,
+            &quot;isUseCount&quot;: 49,
+            &quot;type&quot;: 1,
+            &quot;action_solution&quot;: {
+                &quot;type&quot;: &quot;order&quot;,
+                &quot;total_amount&quot;: &quot;12&quot;
+            },
+            &quot;condition_type&quot;: &quot;1&quot;
+        }
+    ],
+    &quot;res&quot;: &quot;&quot;
 }
 </code></pre><blockquote>
 <p>update_time:’2017.04.14’</p>
 </blockquote>
 <ul>
-<li><strong> 获取所有优惠券基础信息 </strong><blockquote>
-<p>getCardList 请求post</p>
+<li><strong> 获取所有优惠券基础信息 </strong></li>
+<li>请求类型 POST<blockquote>
+<p>wap2.card.getCard</p>
 </blockquote>
 </li>
 </ul>
@@ -593,7 +605,7 @@ coupon_total_number">
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/25/yinger-card/" data-id="cj35jd8jo0002fottqv1thy1b" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/25/yinger-card/" data-id="cj35lucps00023wttxkjhwh6o" class="article-share-link">Share</a>
       
       
     </footer>
