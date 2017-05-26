@@ -103,7 +103,7 @@ Y
 
 
 coupon_total_number">
-<meta property="og:updated_time" content="2017-05-26T07:11:20.111Z">
+<meta property="og:updated_time" content="2017-05-26T07:38:34.649Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="yinger_card">
 <meta name="twitter:description" content="文档说明
@@ -403,48 +403,75 @@ coupon_total_number">
 <p>接口返回值</p>
 </blockquote>
 <pre><code>{
-    &quot;rsp&quot;: &quot;succ&quot;,
-    &quot;data&quot;: [
-        {
-            &quot;cpns_id&quot;: &quot;6&quot;,
-            &quot;prefix&quot;: &quot;Baaaa&quot;,
-            &quot;coupon_total_number&quot;: &quot;1000&quot;,
-            &quot;cpns_name&quot;: &quot;优惠券名称&quot;,
-            &quot;description&quot;: &quot;我是描述1&quot;,
-            &quot;start_time&quot;: 1495382400,
-            &quot;end_time&quot;: 1498233600,
-            &quot;brands&quot;: [
-                &quot;1&quot;,
-                &quot;2&quot;,
-                &quot;3&quot;,
-                &quot;7&quot;,
-                &quot;8&quot;,
-                &quot;9&quot;,
-                &quot;10&quot;,
-                &quot;11&quot;,
-                &quot;12&quot;
-            ],
-            &quot;is_allow_aftersale&quot;: &quot;1&quot;,
-            &quot;activity_start_allow&quot;: &quot;&quot;,
-            &quot;activity_finish_allow&quot;: &quot;&quot;,
-            &quot;condition&quot;: {
-                &quot;type&quot;: &quot;b2c_sales_order_item_order&quot;,
-                &quot;attribute&quot;: &quot;order_subtotal&quot;,
-                &quot;operator&quot;: &quot;&gt;=&quot;,
-                &quot;value&quot;: &quot;1000&quot;
-            },
-            &quot;availableInventory&quot;: 981,
-            &quot;isUseCount&quot;: 34,
-            &quot;action_solution&quot;: {
-                &quot;b2c_promotion_solutions_topercent&quot;: {
-                    &quot;type&quot;: &quot;order&quot;,
-                    &quot;percent&quot;: &quot;50&quot;
-                }
-            },
-            &quot;&amp;index&amp;&quot;: 0
-        }
-    ],
-    &quot;res&quot;: &quot;&quot;
+   &quot;rsp&quot;: &quot;succ&quot;,
+   &quot;data&quot;: [
+       {
+           &quot;cpns_id&quot;: &quot;4&quot;,
+           &quot;prefix&quot;: &quot;B98976979&quot;,
+           &quot;coupon_total_number&quot;: &quot;5&quot;,
+           &quot;cpns_name&quot;: &quot;优惠券（买二增一）&quot;,
+           &quot;description&quot;: &quot;满2件赠送马克杯&quot;,
+           &quot;start_time&quot;: 1459440000,
+           &quot;end_time&quot;: 1460736000,
+           &quot;brands&quot;: [
+               &quot;2&quot;,
+               &quot;3&quot;
+           ],
+           &quot;is_allow_aftersale&quot;: &quot;0&quot;,
+           &quot;activity_start_allow&quot;: &quot;0&quot;,
+           &quot;activity_finish_allow&quot;: &quot;0&quot;,
+           &quot;condition&quot;: {
+               &quot;type&quot;: &quot;b2c_sales_order_item_order&quot;,
+               &quot;attribute&quot;: &quot;order_subtotal&quot;,
+               &quot;operator&quot;: &quot;&gt;=&quot;,
+               &quot;value&quot;: &quot;0&quot;
+           },
+           &quot;availableInventory&quot;: 5,
+           &quot;isUseCount&quot;: 13,
+           &quot;type&quot;: 1,
+           &quot;action_solution&quot;: {
+               &quot;type&quot;: &quot;order&quot;,
+               &quot;total_amount&quot;: &quot;100&quot;
+           }
+       },
+       {
+           &quot;cpns_id&quot;: &quot;6&quot;,
+           &quot;prefix&quot;: &quot;Baaaa&quot;,
+           &quot;coupon_total_number&quot;: &quot;1000&quot;,
+           &quot;cpns_name&quot;: &quot;优惠券名称&quot;,
+           &quot;description&quot;: &quot;我是描述1&quot;,
+           &quot;start_time&quot;: 1495382400,
+           &quot;end_time&quot;: 1498233600,
+           &quot;brands&quot;: [
+               &quot;1&quot;,
+               &quot;2&quot;,
+               &quot;3&quot;,
+               &quot;7&quot;,
+               &quot;8&quot;,
+               &quot;9&quot;,
+               &quot;10&quot;,
+               &quot;11&quot;,
+               &quot;12&quot;
+           ],
+           &quot;is_allow_aftersale&quot;: &quot;1&quot;,
+           &quot;activity_start_allow&quot;: &quot;0&quot;,
+           &quot;activity_finish_allow&quot;: &quot;0&quot;,
+           &quot;condition&quot;: {
+               &quot;type&quot;: &quot;b2c_sales_order_item_order&quot;,
+               &quot;attribute&quot;: &quot;order_subtotal&quot;,
+               &quot;operator&quot;: &quot;&gt;=&quot;,
+               &quot;value&quot;: &quot;1000&quot;
+           },
+           &quot;availableInventory&quot;: 1000,
+           &quot;isUseCount&quot;: 49,
+           &quot;type&quot;: 1,
+           &quot;action_solution&quot;: {
+               &quot;type&quot;: &quot;order&quot;,
+               &quot;total_amount&quot;: &quot;12&quot;
+           }
+       }
+   ],
+   &quot;res&quot;: &quot;&quot;
 }
 </code></pre><blockquote>
 <p>update_time:’2017.04.14’</p>
@@ -566,7 +593,7 @@ coupon_total_number">
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/25/yinger-card/" data-id="cj35ie38n0002dottt0yrmzz8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/25/yinger-card/" data-id="cj35jd8jo0002fottqv1thy1b" class="article-share-link">Share</a>
       
       
     </footer>
