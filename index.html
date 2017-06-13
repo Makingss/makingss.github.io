@@ -189,6 +189,13 @@
 <td style="text-align:left">是否允许售后</td>
 </tr>
 <tr>
+<td>is_currency</td>
+<td style="text-align:left">enum</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">0为普通券 1为通用券</td>
+</tr>
+<tr>
 <td>activity_start_allow</td>
 <td style="text-align:left">bool</td>
 <td style="text-align:left">N</td>
@@ -256,7 +263,14 @@
 <td style="text-align:left">string</td>
 <td style="text-align:left">N</td>
 <td style="text-align:left">1</td>
-<td style="text-align:left">1为当前用户已领取</td>
+<td style="text-align:left">1为当前用户已领取，0为尚未领取</td>
+</tr>
+<tr>
+<td>type</td>
+<td style="text-align:left">enum</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“2”</td>
+<td style="text-align:left">0为打折券，1为优惠券，2为通用券</td>
 </tr>
 </tbody>
 </table>
@@ -339,6 +353,7 @@
                 &quot;2&quot;
             ],
             &quot;is_allow_aftersale&quot;: &quot;0&quot;,
+            &quot;is_currency&quot;:&quot;1&quot;,
             &quot;activity_start_allow&quot;: &quot;0&quot;,
             &quot;activity_finish_allow&quot;: &quot;0&quot;,
             &quot;condition&quot;: {
@@ -624,7 +639,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/25/yinger-card/" data-id="cj3pot6hh0000k0tthgr95p40" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/25/yinger-card/" data-id="cj3v6tz3m0001c0tt78yfr3jb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -796,7 +811,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/14/db/" data-id="cj3pot6hk0001k0ttj42mgwpq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/04/14/db/" data-id="cj3v6tz3o0002c0tt9nohde4w" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1217,7 +1232,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/24/grentench/" data-id="cj3pot6hm0002k0ttqs6sc4x1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/24/grentench/" data-id="cj3v6tz3h0000c0tth8gbohnj" class="article-share-link">Share</a>
       
       
     </footer>

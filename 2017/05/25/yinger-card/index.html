@@ -99,7 +99,7 @@ string
 Y
 全场满100立即1
 卡券类型">
-<meta property="og:updated_time" content="2017-06-09T10:05:26.222Z">
+<meta property="og:updated_time" content="2017-06-13T03:49:35.341Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="yinger_card">
 <meta name="twitter:description" content="文档说明
@@ -320,6 +320,13 @@ Y
 <td style="text-align:left">是否允许售后</td>
 </tr>
 <tr>
+<td>is_currency</td>
+<td style="text-align:left">enum</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">0为普通券 1为通用券</td>
+</tr>
+<tr>
 <td>activity_start_allow</td>
 <td style="text-align:left">bool</td>
 <td style="text-align:left">N</td>
@@ -387,7 +394,14 @@ Y
 <td style="text-align:left">string</td>
 <td style="text-align:left">N</td>
 <td style="text-align:left">1</td>
-<td style="text-align:left">1为当前用户已领取</td>
+<td style="text-align:left">1为当前用户已领取，0为尚未领取</td>
+</tr>
+<tr>
+<td>type</td>
+<td style="text-align:left">enum</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“2”</td>
+<td style="text-align:left">0为打折券，1为优惠券，2为通用券</td>
 </tr>
 </tbody>
 </table>
@@ -470,6 +484,7 @@ Y
                 &quot;2&quot;
             ],
             &quot;is_allow_aftersale&quot;: &quot;0&quot;,
+            &quot;is_currency&quot;:&quot;1&quot;,
             &quot;activity_start_allow&quot;: &quot;0&quot;,
             &quot;activity_finish_allow&quot;: &quot;0&quot;,
             &quot;condition&quot;: {
@@ -755,7 +770,7 @@ Y
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/25/yinger-card/" data-id="cj3pot6hh0000k0tthgr95p40" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/25/yinger-card/" data-id="cj3v6tz3m0001c0tt78yfr3jb" class="article-share-link">Share</a>
       
       
     </footer>
