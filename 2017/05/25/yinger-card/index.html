@@ -99,7 +99,7 @@ string
 Y
 全场满100立即1
 卡券类型">
-<meta property="og:updated_time" content="2017-06-13T03:49:35.341Z">
+<meta property="og:updated_time" content="2017-06-16T03:01:10.315Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="yinger_card">
 <meta name="twitter:description" content="文档说明
@@ -766,11 +766,113 @@ Y
 <blockquote>
 <p>update_time:’2017.06.1’</p>
 </blockquote>
+<ul>
+<li><strong> 商城卡券微信推送展示页接口 </strong></li>
+<li>请求类型 GET<blockquote>
+<p>wap2.card.getCard</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>结果</p>
+</blockquote>
+<pre><code>{
+    &quot;rsp&quot;: &quot;fail&quot;,
+    &quot;res&quot;: &quot;succ&quot;,
+    &quot;data&quot;: {
+        &quot;goodInfo&quot;: {
+            &quot;goods_id&quot;: &quot;2644&quot;,
+            &quot;name&quot;: &quot;YINER音儿2016秋款/优雅浅蓝色长款H型桑蚕丝女衬衫86330080&quot;,
+            &quot;price&quot;: &quot;3312.00&quot;,
+            &quot;s_url&quot;: &quot;public/images/b9/d7/8a/8132f82eb0df6fcbbed7ceeffc23c0662b8029f5.jpg&quot;
+        },
+        &quot;cardInfo&quot;: {
+            &quot;cpns_id&quot;: &quot;2&quot;,
+            &quot;rule_id&quot;: &quot;1&quot;,
+            &quot;prefix&quot;: &quot;ACC&quot;,
+            &quot;coupon_total_number&quot;: &quot;10&quot;,
+            &quot;cpns_name&quot;: &quot;满1000减100&quot;,
+            &quot;cpns_type_name&quot;: &quot;满1000减100&quot;,
+            &quot;description&quot;: &quot;满1000减100&quot;,
+            &quot;start_time&quot;: 1497456000,
+            &quot;end_time&quot;: 1497715200,
+            &quot;brands&quot;: null,
+            &quot;grant_start_time&quot;: 1497283200,
+            &quot;grant_end_time&quot;: 1497715200,
+            &quot;is_allow_aftersale&quot;: &quot;0&quot;,
+            &quot;activity_start_allow&quot;: &quot;0&quot;,
+            &quot;activity_finish_allow&quot;: &quot;0&quot;,
+            &quot;condition&quot;: {
+                &quot;type&quot;: &quot;b2c_sales_order_item_order&quot;,
+                &quot;attribute&quot;: &quot;order_subtotal&quot;,
+                &quot;operator&quot;: &quot;&gt;=&quot;,
+                &quot;value&quot;: &quot;1000&quot;
+            },
+            &quot;is_currency&quot;: 0,
+            &quot;availableInventory&quot;: 10,
+            &quot;type&quot;: 1,
+            &quot;action_solution&quot;: {
+                &quot;type&quot;: &quot;order&quot;,
+                &quot;total_amount&quot;: &quot;100&quot;
+            },
+            &quot;condition_type&quot;: &quot;0&quot;
+        }
+    }
+}
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th style="text-align:left">类型/长度</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>res</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">返回状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">返回消息</td>
+</tr>
+<tr>
+<td>goodInfo</td>
+<td style="text-align:left">obj</td>
+<td style="text-align:left">商品信息</td>
+</tr>
+<tr>
+<td>name</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">商品名称</td>
+</tr>
+<tr>
+<td>price</td>
+<td style="text-align:left">decimal</td>
+<td style="text-align:left">商品默认金额</td>
+</tr>
+<tr>
+<td>s_url</td>
+<td style="text-align:left">url</td>
+<td style="text-align:left">商品图片路径</td>
+</tr>
+<tr>
+<td>cardInfo</td>
+<td style="text-align:left">obj</td>
+<td style="text-align:left">卡券信息 可参照获取卡券列表参数</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>update_time:’2017.06.16’</p>
+</blockquote>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/25/yinger-card/" data-id="cj3v6tz3m0001c0tt78yfr3jb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/25/yinger-card/" data-id="cj3z9prj00000f4ttkuas18qp" class="article-share-link">Share</a>
       
       
     </footer>
