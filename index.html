@@ -214,7 +214,7 @@
 <td style="text-align:left">int</td>
 <td style="text-align:left">Y</td>
 <td style="text-align:left">10</td>
-<td style="text-align:left">卡券库存</td>
+<td style="text-align:left">本来发放卡券库存（注意：并非是可用库存）</td>
 </tr>
 <tr>
 <td>condition</td>
@@ -681,13 +681,13 @@
 </blockquote>
 <pre><code>{
     &quot;rsp&quot;: &quot;fail&quot;,
-    &quot;res&quot;: &quot;succ&quot;,
+    &quot;res&quot;: &quot;error&quot;,
     &quot;data&quot;: {
         &quot;goodInfo&quot;: {
-            &quot;goods_id&quot;: &quot;2644&quot;,
-            &quot;name&quot;: &quot;YINER音儿2016秋款/优雅浅蓝色长款H型桑蚕丝女衬衫86330080&quot;,
-            &quot;price&quot;: &quot;3312.00&quot;,
-            &quot;s_url&quot;: &quot;public/images/b9/d7/8a/8132f82eb0df6fcbbed7ceeffc23c0662b8029f5.jpg&quot;
+            &quot;goods_id&quot;: &quot;2645&quot;,
+            &quot;name&quot;: &quot;YINER音儿2016秋款/优雅浅蓝蝴蝶结修身显瘦女上衣86370120&quot;,
+            &quot;price&quot;: &quot;1782.00&quot;,
+            &quot;s_url&quot;: &quot;public/images/06/8a/cf/6c3a18d840e50483f7b3c37ab7b93fd2041b4802.jpg&quot;
         },
         &quot;cardInfo&quot;: {
             &quot;cpns_id&quot;: &quot;2&quot;,
@@ -719,7 +719,8 @@
                 &quot;total_amount&quot;: &quot;100&quot;
             },
             &quot;condition_type&quot;: &quot;0&quot;
-        }
+        },
+        &quot;inStock&quot;: false
     }
 }
 </code></pre><table>
@@ -766,6 +767,11 @@
 <td style="text-align:left">obj</td>
 <td style="text-align:left">卡券信息 可参照获取卡券列表参数</td>
 </tr>
+<tr>
+<td>inStock</td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">是否有库存 false为无可用库存,true为有可用库存</td>
+</tr>
 </tbody>
 </table>
 <blockquote>
@@ -775,7 +781,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/25/yinger-card/" data-id="cj3zf2his0002asttr3poo86n" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/25/yinger-card/" data-id="cj3zfzq2l0002dstt5bs1vcjp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -947,7 +953,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/14/db/" data-id="cj3zf2hip0001astt9aflreee" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/04/14/db/" data-id="cj3zfzq280000dsttyir6n48q" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1368,7 +1374,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/24/grentench/" data-id="cj3zf2hik0000astt9wqiqcjx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/24/grentench/" data-id="cj3zfzq2f0001dsttuxpyebxk" class="article-share-link">Share</a>
       
       
     </footer>
