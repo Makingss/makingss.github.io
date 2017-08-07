@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>order | API开发文档</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="文档说明
+version:1.0
+url:path+’/api/‘+api_name
+platform:laravel+vue+vuex
+method:默认
+接口返回值默认格式:json
+接口返回值默认结构:{
+  res:true/false,
+  data:{},
+  msg:&amp;apos;错误提示或者错误代码&amp;apos;
+}
+
+
+
+update_time:’2017.03.04’
+
+
+获取订单">
+<meta property="og:type" content="article">
+<meta property="og:title" content="order">
+<meta property="og:url" content="http://yoursite.com/2017/08/07/order/index.html">
+<meta property="og:site_name" content="API开发文档">
+<meta property="og:description" content="文档说明
+version:1.0
+url:path+’/api/‘+api_name
+platform:laravel+vue+vuex
+method:默认
+接口返回值默认格式:json
+接口返回值默认结构:{
+  res:true/false,
+  data:{},
+  msg:&amp;apos;错误提示或者错误代码&amp;apos;
+}
+
+
+
+update_time:’2017.03.04’
+
+
+获取订单">
+<meta property="og:updated_time" content="2017-08-07T09:01:00.200Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="order">
+<meta name="twitter:description" content="文档说明
+version:1.0
+url:path+’/api/‘+api_name
+platform:laravel+vue+vuex
+method:默认
+接口返回值默认格式:json
+接口返回值默认结构:{
+  res:true/false,
+  data:{},
+  msg:&amp;apos;错误提示或者错误代码&amp;apos;
+}
+
+
+
+update_time:’2017.03.04’
+
+
+获取订单">
+  
+    <link rel="alternate" href="/atom.xml" title="API开发文档" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">API开发文档</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-order" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/07/order/" class="article-date">
+  <time datetime="2017-08-07T08:15:29.000Z" itemprop="datePublished">2017-08-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      order
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="文档说明"><a href="#文档说明" class="headerlink" title="文档说明"></a>文档说明</h5><ul>
+<li>version:1.0</li>
+<li>url:path+’/api/‘+api_name</li>
+<li>platform:laravel+vue+vuex</li>
+<li>method:默认</li>
+<li>接口返回值默认格式:json</li>
+<li>接口返回值默认结构:<pre><code>{
+  res:true/false,
+  data:{},
+  msg:&apos;错误提示或者错误代码&apos;
+}
+</code></pre></li>
+</ul>
+<blockquote>
+<p>update_time:’2017.03.04’</p>
+</blockquote>
+<hr>
+<h5 id="获取订单列表"><a href="#获取订单列表" class="headerlink" title="获取订单列表"></a>获取订单列表</h5><ul>
+<li><strong> 订单列表 </strong><blockquote>
+<p>api_name: register</p>
+</blockquote>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th style="text-align:center">实例</th>
+<th style="text-align:right">说明</th>
+<th style="text-align:right">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用户名</td>
+<td style="text-align:center">member_id</td>
+<td style="text-align:right">12797</td>
+<td style="text-align:right">不能为空最长255字符</td>
+</tr>
+<tr>
+<td>类型</td>
+<td style="text-align:center">type</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">enum[1,2,3,4,5,6]。1:待支付，2:待发货，3:已发货，4:已收货,5:分享购买,6,全部订单(不包含分享购买的其他订单)</td>
+</tr>
+<tr>
+<td>偏移量</td>
+<td style="text-align:center">limit</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">取多少数量的内容</td>
+</tr>
+<tr>
+<td>页数</td>
+<td style="text-align:center">page</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">取第一页数量</td>
+</tr>
+</tbody>
+</table>
+<pre><code>    {
+    &quot;rsp&quot;: &quot;succ&quot;,
+    &quot;res&quot;: &quot;success&quot;,
+    &quot;data&quot;: {
+        &quot;170727153110140&quot;: [
+            {
+                &quot;order_id&quot;: &quot;170727153110140&quot;,
+                &quot;pay_status&quot;: &quot;1&quot;,
+                &quot;ship_status&quot;: &quot;0&quot;,
+                &quot;received_status&quot;: &quot;0&quot;,
+                &quot;status&quot;: &quot;active&quot;,
+                &quot;total_amount&quot;: &quot;981.00&quot;,
+                &quot;origin_amount&quot;: &quot;981.00&quot;,
+                &quot;payed&quot;: &quot;0.00&quot;,
+                &quot;received_time&quot;: 0,
+                &quot;sync_lijing&quot;: &quot;0&quot;,
+                &quot;payment&quot;: &quot;wxpayjsapi&quot;,
+                &quot;buy_code&quot;: &quot;&quot;,
+                &quot;product_id&quot;: &quot;24792&quot;,
+                &quot;is_starbuy&quot;: 0,
+                &quot;name&quot;: &quot;YINER音儿GoodLand/优雅钩花V领收腰A字蕾丝连衣裙85805507&quot;,
+                &quot;from_time&quot;: null,
+                &quot;to_time&quot;: null,
+                &quot;goods_id&quot;: &quot;5540&quot;,
+                &quot;s_url&quot;: &quot;public/images/bd/d8/39/cdd88e0069326366af1435da3fbe93e17efe7963.jpg&quot;,
+                &quot;aftersale_status&quot;: &quot;0&quot;,
+                &quot;user_cancel_status&quot;: &quot;0&quot;,
+                &quot;order_rule_discount&quot;: &quot;0.00&quot;,
+                &quot;coupons_discount&quot;: &quot;0.00&quot;,
+                &quot;currency_coupons_discount&quot;: &quot;0.00&quot;,
+                &quot;items_bn&quot;: &quot;808580550701540&quot;,
+                &quot;price&quot;: &quot;981.00&quot;,
+                &quot;sendnum&quot;: &quot;0&quot;,
+                &quot;nums&quot;: &quot;1&quot;,
+                &quot;final_amount&quot;: &quot;981.00&quot;,
+                &quot;obj_id&quot;: &quot;372136&quot;,
+                &quot;item_id&quot;: &quot;419468&quot;,
+                &quot;goods_price&quot;: &quot;981.00&quot;,
+                &quot;product_price&quot;: &quot;981.00&quot;,
+                &quot;p_order_id&quot;: &quot;0&quot;,
+                &quot;delivery_id&quot;: null
+            }
+        ],
+        &quot;170727143748125&quot;: [
+            {
+                &quot;order_id&quot;: &quot;170727143748125&quot;,
+                &quot;pay_status&quot;: &quot;1&quot;,
+                &quot;ship_status&quot;: &quot;0&quot;,
+                &quot;received_status&quot;: &quot;0&quot;,
+                &quot;status&quot;: &quot;active&quot;,
+                &quot;ship_email&quot;: null,
+                &quot;total_amount&quot;: &quot;7152.00&quot;,
+                &quot;origin_amount&quot;: &quot;7152.00&quot;,
+                &quot;payed&quot;: &quot;0.00&quot;,
+                &quot;received_time&quot;: 0,
+                &quot;sync_lijing&quot;: &quot;0&quot;,
+                &quot;payment&quot;: &quot;wxpayjsapi&quot;,
+                &quot;buy_code&quot;: &quot;&quot;,
+                &quot;product_id&quot;: &quot;7707&quot;,
+                &quot;is_starbuy&quot;: 0,
+                &quot;name&quot;: &quot;YINER音儿GoodLand/2016夏装新款 橙色长款层次拼接显瘦无袖连衣裙86205626&quot;,
+                &quot;from_time&quot;: null,
+                &quot;to_time&quot;: null,
+                &quot;goods_id&quot;: &quot;1801&quot;,
+                &quot;s_url&quot;: &quot;public/images/1e/42/9b/07bbca328efcf8dce4f8e2e7b20f3c1c9580de94.jpg&quot;,
+                &quot;aftersale_status&quot;: &quot;0&quot;,
+                &quot;user_cancel_status&quot;: &quot;0&quot;,
+                &quot;order_rule_discount&quot;: &quot;0.00&quot;,
+                &quot;coupons_discount&quot;: &quot;0.00&quot;,
+                &quot;currency_coupons_discount&quot;: &quot;0.00&quot;,
+                &quot;items_bn&quot;: &quot;808620562606142&quot;,
+                &quot;price&quot;: &quot;1788.00&quot;,
+                &quot;sendnum&quot;: &quot;0&quot;,
+                &quot;nums&quot;: 4,
+                &quot;final_amount&quot;: &quot;1788.00&quot;,
+                &quot;obj_id&quot;: &quot;329488&quot;,
+                &quot;item_id&quot;: &quot;376820&quot;,
+                &quot;goods_price&quot;: &quot;1788.00&quot;,
+                &quot;product_price&quot;: &quot;1788.00&quot;,
+                &quot;p_order_id&quot;: &quot;0&quot;,
+                &quot;delivery_id&quot;: null,
+                &quot;item_info&quot;: [
+                    {
+                        &quot;item_id&quot;: &quot;376821&quot;,
+                        &quot;aftersale_status&quot;: &quot;0&quot;,
+                        &quot;user_cancel_status&quot;: &quot;0&quot;,
+                        &quot;obj_id&quot;: &quot;329489&quot;,
+                        &quot;order_rule_discount&quot;: &quot;0.00&quot;,
+                        &quot;coupons_discount&quot;: &quot;0.00&quot;,
+                        &quot;currency_coupons_discount&quot;: &quot;0.00&quot;
+                    },
+                    {
+                        &quot;item_id&quot;: &quot;376822&quot;,
+                        &quot;aftersale_status&quot;: &quot;0&quot;,
+                        &quot;user_cancel_status&quot;: &quot;0&quot;,
+                        &quot;obj_id&quot;: &quot;329490&quot;,
+                        &quot;order_rule_discount&quot;: &quot;0.00&quot;,
+                        &quot;coupons_discount&quot;: &quot;0.00&quot;,
+                        &quot;currency_coupons_discount&quot;: &quot;0.00&quot;
+                    },
+                    {
+                        &quot;item_id&quot;: &quot;376823&quot;,
+                        &quot;aftersale_status&quot;: &quot;0&quot;,
+                        &quot;user_cancel_status&quot;: &quot;0&quot;,
+                        &quot;obj_id&quot;: &quot;329491&quot;,
+                        &quot;order_rule_discount&quot;: &quot;0.00&quot;,
+                        &quot;coupons_discount&quot;: &quot;0.00&quot;,
+                        &quot;currency_coupons_discount&quot;: &quot;0.00&quot;
+                    }
+                ]
+            }
+        ]
+    },
+    &quot;total_results&quot;: 0
+}
+</code></pre><table>
+<thead>
+<tr>
+<th>字段名</th>
+<th style="text-align:left">类型/长度</th>
+<th style="text-align:left">非必须</th>
+<th style="text-align:left">事例</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>res</td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">返回json字符串</td>
+</tr>
+<tr>
+<td>data</td>
+<td style="text-align:left">obj</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">返回结果状态</td>
+</tr>
+<tr>
+<td>order_id</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">170727153110140</td>
+<td style="text-align:left">订单号</td>
+</tr>
+<tr>
+<td>pay_status</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“1”</td>
+<td style="text-align:left">支付状态,’0’:未支付;’1’:已支付</td>
+</tr>
+<tr>
+<td>ship_status</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">发货状态,’0’:未支付;’1’:已支付</td>
+</tr>
+<tr>
+<td>received_status</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">收货状态,’0’:未支付;’1’:已支付</td>
+</tr>
+<tr>
+<td>status</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“active”</td>
+<td style="text-align:left">订单状态,”active”：有效;”dead”:作废;””;”finish”:完成;”cancel”:取消</td>
+</tr>
+<tr>
+<td>total_amount</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“200.00”</td>
+<td style="text-align:left">优惠后订单金额</td>
+</tr>
+<tr>
+<td>origin_amount</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“500.00”</td>
+<td style="text-align:left">订单未优惠金额</td>
+</tr>
+<tr>
+<td>payed</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“200.00”</td>
+<td style="text-align:left">实际支付金额</td>
+</tr>
+<tr>
+<td>received_time</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">1502095150</td>
+<td style="text-align:left">确认收货时间</td>
+</tr>
+<tr>
+<td>sync_lijing</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">是否同步丽晶</td>
+</tr>
+<tr>
+<td>payment</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“wxpayjsapi”</td>
+<td style="text-align:left">支付方式 wxpayjsapi:微信支付</td>
+</tr>
+<tr>
+<td>buy_code</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">false</td>
+<td style="text-align:left">“12797”</td>
+<td style="text-align:left">分享购买会员ID</td>
+</tr>
+<tr>
+<td>product_id</td>
+<td style="text-align:left">sting</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“24792”</td>
+<td style="text-align:left">商品ID</td>
+</tr>
+<tr>
+<td>is_starbuy</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">是否是活动商品</td>
+</tr>
+<tr>
+<td>from_time</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">活动开始时间</td>
+</tr>
+<tr>
+<td>to_time</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">活动截止时间</td>
+</tr>
+<tr>
+<td>goods_id</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“5540”</td>
+<td style="text-align:left">商品ID</td>
+</tr>
+<tr>
+<td>s_url</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“public/images/bd/d8/39/cdd88e0069326366af1435da3fbe93e17efe7963.jpg”</td>
+<td style="text-align:left">缩略图图片</td>
+</tr>
+<tr>
+<td>aftersale_status</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">售后标记 1:已做过售后</td>
+</tr>
+<tr>
+<td>user_cancel_status</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">售前标记 1:已做过售前</td>
+</tr>
+<tr>
+<td>order_rule_discount</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">订单促销金额</td>
+</tr>
+<tr>
+<td>coupons_discount</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">优惠券促销金额</td>
+</tr>
+<tr>
+<td>currency_coupons_discount</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">通用券促销金额</td>
+</tr>
+<tr>
+<td>items_bn</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“808580550701540”</td>
+<td style="text-align:left">商品bn</td>
+</tr>
+<tr>
+<td>price</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">单件衣服价格</td>
+</tr>
+<tr>
+<td>sendnum</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“808580550701540”</td>
+<td style="text-align:left">商品bn</td>
+</tr>
+<tr>
+<td>nums</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“2”</td>
+<td style="text-align:left">购买衣服数量 多件会生成item_info中体现同款同码商品的item_id</td>
+</tr>
+<tr>
+<td>item_info</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">false</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">同款同码商品数据</td>
+</tr>
+<tr>
+<td>item_id</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“376821”</td>
+<td style="text-align:left">同上item_id</td>
+</tr>
+<tr>
+<td>aftersale_status</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">同上</td>
+</tr>
+<tr>
+<td>user_cancel_status</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">同上</td>
+</tr>
+<tr>
+<td>obj_id</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">同上</td>
+</tr>
+<tr>
+<td>order_rule_discount</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0.00”</td>
+<td style="text-align:left">同上</td>
+</tr>
+<tr>
+<td>coupons_discount</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0.00”</td>
+<td style="text-align:left">同上</td>
+</tr>
+<tr>
+<td>currency_coupons_discount</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0.00”</td>
+<td style="text-align:left">同上</td>
+</tr>
+<tr>
+<td>final_amount</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“200”</td>
+<td style="text-align:left">支付金额</td>
+</tr>
+<tr>
+<td>obj_id</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">items表中的项目id</td>
+</tr>
+<tr>
+<td>item_id</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“376820”</td>
+<td style="text-align:left">项目ID</td>
+</tr>
+<tr>
+<td>goods_price</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“200”</td>
+<td style="text-align:left">单件商品金额</td>
+</tr>
+<tr>
+<td>product_price</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“200”</td>
+<td style="text-align:left">单件产品金额</td>
+</tr>
+<tr>
+<td>p_order_id</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">父order_id</td>
+</tr>
+<tr>
+<td>delivery_id</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">false</td>
+<td style="text-align:left">“120170703685533211”</td>
+<td style="text-align:left">发货单号,订单处于待收货状态，发货单能为空</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<ul>
+<li><strong> 订单详情 </strong><blockquote>
+<p>api_name: register</p>
+</blockquote>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th style="text-align:center">实例</th>
+<th style="text-align:right">说明</th>
+<th style="text-align:right">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用户名</td>
+<td style="text-align:center">member_id</td>
+<td style="text-align:right">12797</td>
+<td style="text-align:right">不能为空最长255字符</td>
+</tr>
+<tr>
+<td>类型</td>
+<td style="text-align:center">type</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">enum[1,2,3,4,5,6]。1:待支付，2:待发货，3:已发货，4:已收货,5:分享购买,6,全部订单(不包含分享购买的其他订单)</td>
+</tr>
+<tr>
+<td>偏移量</td>
+<td style="text-align:center">limit</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">取多少数量的内容</td>
+</tr>
+<tr>
+<td>页数</td>
+<td style="text-align:center">page</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">取第一页数量</td>
+</tr>
+</tbody>
+</table>
+<pre><code>    {
+    &quot;rsp&quot;: &quot;succ&quot;,
+    &quot;res&quot;: &quot;success&quot;,
+    &quot;data&quot;: {
+        &quot;170727153110140&quot;: [
+            {
+                &quot;order_id&quot;: &quot;170727153110140&quot;,
+                &quot;pay_status&quot;: &quot;1&quot;,
+                &quot;ship_status&quot;: &quot;0&quot;,
+                &quot;received_status&quot;: &quot;0&quot;,
+                &quot;status&quot;: &quot;active&quot;,
+                &quot;ship_email&quot;: null,
+                &quot;total_amount&quot;: &quot;981.00&quot;,
+                &quot;origin_amount&quot;: &quot;981.00&quot;,
+                &quot;payed&quot;: &quot;0.00&quot;,
+                &quot;received_time&quot;: 0,
+                &quot;sync_lijing&quot;: &quot;0&quot;,
+                &quot;payment&quot;: &quot;wxpayjsapi&quot;,
+                &quot;buy_code&quot;: &quot;&quot;,
+                &quot;product_id&quot;: &quot;24792&quot;,
+                &quot;is_starbuy&quot;: 0,
+                &quot;name&quot;: &quot;YINER音儿GoodLand/优雅钩花V领收腰A字蕾丝连衣裙85805507&quot;,
+                &quot;from_time&quot;: null,
+                &quot;to_time&quot;: null,
+                &quot;goods_id&quot;: &quot;5540&quot;,
+                &quot;s_url&quot;: &quot;public/images/bd/d8/39/cdd88e0069326366af1435da3fbe93e17efe7963.jpg&quot;,
+                &quot;aftersale_status&quot;: &quot;0&quot;,
+                &quot;user_cancel_status&quot;: &quot;0&quot;,
+                &quot;order_rule_discount&quot;: &quot;0.00&quot;,
+                &quot;coupons_discount&quot;: &quot;0.00&quot;,
+                &quot;currency_coupons_discount&quot;: &quot;0.00&quot;,
+                &quot;items_bn&quot;: &quot;808580550701540&quot;,
+                &quot;price&quot;: &quot;981.00&quot;,
+                &quot;sendnum&quot;: &quot;0&quot;,
+                &quot;nums&quot;: &quot;1&quot;,
+                &quot;final_amount&quot;: &quot;981.00&quot;,
+                &quot;obj_id&quot;: &quot;372136&quot;,
+                &quot;item_id&quot;: &quot;419468&quot;,
+                &quot;goods_price&quot;: &quot;981.00&quot;,
+                &quot;product_price&quot;: &quot;981.00&quot;,
+                &quot;p_order_id&quot;: &quot;0&quot;,
+                &quot;delivery_id&quot;: null
+            }
+        ],
+        &quot;170727143748125&quot;: [
+            {
+                &quot;order_id&quot;: &quot;170727143748125&quot;,
+                &quot;pay_status&quot;: &quot;1&quot;,
+                &quot;ship_status&quot;: &quot;0&quot;,
+                &quot;received_status&quot;: &quot;0&quot;,
+                &quot;status&quot;: &quot;active&quot;,
+                &quot;ship_email&quot;: null,
+                &quot;total_amount&quot;: &quot;7152.00&quot;,
+                &quot;origin_amount&quot;: &quot;7152.00&quot;,
+                &quot;payed&quot;: &quot;0.00&quot;,
+                &quot;received_time&quot;: 0,
+                &quot;sync_lijing&quot;: &quot;0&quot;,
+                &quot;payment&quot;: &quot;wxpayjsapi&quot;,
+                &quot;buy_code&quot;: &quot;&quot;,
+                &quot;product_id&quot;: &quot;7707&quot;,
+                &quot;is_starbuy&quot;: 0,
+                &quot;name&quot;: &quot;YINER音儿GoodLand/2016夏装新款 橙色长款层次拼接显瘦无袖连衣裙86205626&quot;,
+                &quot;from_time&quot;: null,
+                &quot;to_time&quot;: null,
+                &quot;goods_id&quot;: &quot;1801&quot;,
+                &quot;s_url&quot;: &quot;public/images/1e/42/9b/07bbca328efcf8dce4f8e2e7b20f3c1c9580de94.jpg&quot;,
+                &quot;aftersale_status&quot;: &quot;0&quot;,
+                &quot;user_cancel_status&quot;: &quot;0&quot;,
+                &quot;order_rule_discount&quot;: &quot;0.00&quot;,
+                &quot;coupons_discount&quot;: &quot;0.00&quot;,
+                &quot;currency_coupons_discount&quot;: &quot;0.00&quot;,
+                &quot;items_bn&quot;: &quot;808620562606142&quot;,
+                &quot;price&quot;: &quot;1788.00&quot;,
+                &quot;sendnum&quot;: &quot;0&quot;,
+                &quot;nums&quot;: 4,
+                &quot;final_amount&quot;: &quot;1788.00&quot;,
+                &quot;obj_id&quot;: &quot;329488&quot;,
+                &quot;item_id&quot;: &quot;376820&quot;,
+                &quot;goods_price&quot;: &quot;1788.00&quot;,
+                &quot;product_price&quot;: &quot;1788.00&quot;,
+                &quot;p_order_id&quot;: &quot;0&quot;,
+                &quot;delivery_id&quot;: null,
+                &quot;item_info&quot;: [
+                    {
+                        &quot;item_id&quot;: &quot;376821&quot;,
+                        &quot;aftersale_status&quot;: &quot;0&quot;,
+                        &quot;user_cancel_status&quot;: &quot;0&quot;,
+                        &quot;obj_id&quot;: &quot;329489&quot;,
+                        &quot;order_rule_discount&quot;: &quot;0.00&quot;,
+                        &quot;coupons_discount&quot;: &quot;0.00&quot;,
+                        &quot;currency_coupons_discount&quot;: &quot;0.00&quot;
+                    },
+                    {
+                        &quot;item_id&quot;: &quot;376822&quot;,
+                        &quot;aftersale_status&quot;: &quot;0&quot;,
+                        &quot;user_cancel_status&quot;: &quot;0&quot;,
+                        &quot;obj_id&quot;: &quot;329490&quot;,
+                        &quot;order_rule_discount&quot;: &quot;0.00&quot;,
+                        &quot;coupons_discount&quot;: &quot;0.00&quot;,
+                        &quot;currency_coupons_discount&quot;: &quot;0.00&quot;
+                    },
+                    {
+                        &quot;item_id&quot;: &quot;376823&quot;,
+                        &quot;aftersale_status&quot;: &quot;0&quot;,
+                        &quot;user_cancel_status&quot;: &quot;0&quot;,
+                        &quot;obj_id&quot;: &quot;329491&quot;,
+                        &quot;order_rule_discount&quot;: &quot;0.00&quot;,
+                        &quot;coupons_discount&quot;: &quot;0.00&quot;,
+                        &quot;currency_coupons_discount&quot;: &quot;0.00&quot;
+                    }
+                ]
+            }
+        ]
+    },
+    &quot;total_results&quot;: 0
+}
+</code></pre><table>
+<thead>
+<tr>
+<th>字段名</th>
+<th style="text-align:left">类型/长度</th>
+<th style="text-align:left">非必须</th>
+<th style="text-align:left">事例</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>res</td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">返回json字符串</td>
+</tr>
+<tr>
+<td>data</td>
+<td style="text-align:left">obj</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">返回结果状态</td>
+</tr>
+<tr>
+<td>order_id</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">170727153110140</td>
+<td style="text-align:left">订单号</td>
+</tr>
+<tr>
+<td>pay_status</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“1”</td>
+<td style="text-align:left">支付状态,’0’:未支付;’1’:已支付</td>
+</tr>
+<tr>
+<td>ship_status</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">发货状态,’0’:未支付;’1’:已支付</td>
+</tr>
+<tr>
+<td>received_status</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">收货状态,’0’:未支付;’1’:已支付</td>
+</tr>
+<tr>
+<td>status</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“active”</td>
+<td style="text-align:left">订单状态,”active”：有效;”dead”:作废;””;”finish”:完成;”cancel”:取消</td>
+</tr>
+<tr>
+<td>ship_email</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“636154”</td>
+<td style="text-align:left">收货人邮编</td>
+</tr>
+<tr>
+<td>total_amount</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“200.00”</td>
+<td style="text-align:left">优惠后订单金额</td>
+</tr>
+<tr>
+<td>origin_amount</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“500.00”</td>
+<td style="text-align:left">订单未优惠金额</td>
+</tr>
+<tr>
+<td>payed</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“200.00”</td>
+<td style="text-align:left">实际支付金额</td>
+</tr>
+<tr>
+<td>received_time</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">1502095150</td>
+<td style="text-align:left">确认收货时间</td>
+</tr>
+<tr>
+<td>sync_lijing</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">是否同步丽晶</td>
+</tr>
+<tr>
+<td>payment</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“wxpayjsapi”</td>
+<td style="text-align:left">支付方式 wxpayjsapi:微信支付</td>
+</tr>
+<tr>
+<td>buy_code</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">false</td>
+<td style="text-align:left">“12797”</td>
+<td style="text-align:left">分享购买会员ID</td>
+</tr>
+<tr>
+<td>product_id</td>
+<td style="text-align:left">sting</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“24792”</td>
+<td style="text-align:left">商品ID</td>
+</tr>
+<tr>
+<td>is_starbuy</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">是否是活动商品</td>
+</tr>
+<tr>
+<td>from_time</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">活动开始时间</td>
+</tr>
+<tr>
+<td>to_time</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">活动截止时间</td>
+</tr>
+<tr>
+<td>goods_id</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“5540”</td>
+<td style="text-align:left">商品ID</td>
+</tr>
+<tr>
+<td>s_url</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“public/images/bd/d8/39/cdd88e0069326366af1435da3fbe93e17efe7963.jpg”</td>
+<td style="text-align:left">缩略图图片</td>
+</tr>
+<tr>
+<td>aftersale_status</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">售后标记 1:已做过售后</td>
+</tr>
+<tr>
+<td>user_cancel_status</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">售前标记 1:已做过售前</td>
+</tr>
+<tr>
+<td>order_rule_discount</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">订单促销金额</td>
+</tr>
+<tr>
+<td>coupons_discount</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">优惠券促销金额</td>
+</tr>
+<tr>
+<td>currency_coupons_discount</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">通用券促销金额</td>
+</tr>
+<tr>
+<td>items_bn</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“808580550701540”</td>
+<td style="text-align:left">商品bn</td>
+</tr>
+<tr>
+<td>price</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">单件衣服价格</td>
+</tr>
+<tr>
+<td>sendnum</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“808580550701540”</td>
+<td style="text-align:left">商品bn</td>
+</tr>
+<tr>
+<td>nums</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“2”</td>
+<td style="text-align:left">购买衣服数量 多件会生成item_info中体现同款同码商品的item_id</td>
+</tr>
+<tr>
+<td>item_info</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">false</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">同款同码商品数据</td>
+</tr>
+<tr>
+<td>item_id</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“376821”</td>
+<td style="text-align:left">同上item_id</td>
+</tr>
+<tr>
+<td>aftersale_status</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">同上</td>
+</tr>
+<tr>
+<td>user_cancel_status</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">同上</td>
+</tr>
+<tr>
+<td>obj_id</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">同上</td>
+</tr>
+<tr>
+<td>order_rule_discount</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0.00”</td>
+<td style="text-align:left">同上</td>
+</tr>
+<tr>
+<td>coupons_discount</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0.00”</td>
+<td style="text-align:left">同上</td>
+</tr>
+<tr>
+<td>currency_coupons_discount</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0.00”</td>
+<td style="text-align:left">同上</td>
+</tr>
+<tr>
+<td>final_amount</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“200”</td>
+<td style="text-align:left">支付金额</td>
+</tr>
+<tr>
+<td>obj_id</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">items表中的项目id</td>
+</tr>
+<tr>
+<td>item_id</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“376820”</td>
+<td style="text-align:left">项目ID</td>
+</tr>
+<tr>
+<td>goods_price</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“200”</td>
+<td style="text-align:left">单件商品金额</td>
+</tr>
+<tr>
+<td>product_price</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“200”</td>
+<td style="text-align:left">单件产品金额</td>
+</tr>
+<tr>
+<td>p_order_id</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">父order_id</td>
+</tr>
+<tr>
+<td>delivery_id</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">false</td>
+<td style="text-align:left">“120170703685533211”</td>
+<td style="text-align:left">发货单号,订单处于待收货状态，发货单能为空</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/08/07/order/" data-id="cj61xgihm000218tty8brn24g" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/05/25/yinger-card/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">yinger_card</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/07/order/">order</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/25/yinger-card/">yinger_card</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/14/db/">db</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/24/grentench/">grentech api 文档</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 yingerfashion<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
