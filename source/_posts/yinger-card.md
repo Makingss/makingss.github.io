@@ -25,6 +25,7 @@ tags:
 | is_currency | enum | Y | "0" | 0为普通券 1为通用券 |
 | activity_start_allow | bool | N | "" | 允许售后(活动开始后) 0表示不允许该售后方式 |
 | activity_finish_allow | bool | N | "" | 允许售后(活动结束后) 0表示不允许该售后方式 |
+| availableInventory | int | Y | 10 | 本来发放卡券库存（注意：并非是可用库存） |
 | condition | array | Y | - | 活动条件 |
 | operator | sting | Y | ">=" | 符号 |
 | value | string | Y | "100" | 当订单总额满100时，将享受优惠方案。当value为0时对所有订单给予优惠 |
@@ -250,20 +251,25 @@ tags:
 > update_time:'2017.06.1'
 
 -  ** 商城卡券微信推送展示页接口 **
-- 请求类型 GET
+- 请求类型 POST
 > wap2.card.firstGetCardShow
+
+| 参数 | 类型/长度 | 非必须 | 事例 |备注 |
+| -----|:-------|:-------|:-----|:--------|
+| member_id | string | Y | 12797 | 会员ID |
+| cardID | string | Y | 1 | 卡券ID |
 
 > 结果
   
     {
         "rsp": "fail",
-        "res": "succ",
+        "res": "error",
         "data": {
             "goodInfo": {
-                "goods_id": "2644",
-                "name": "YINER音儿2016秋款/优雅浅蓝色长款H型桑蚕丝女衬衫86330080",
-                "price": "3312.00",
-                "s_url": "public/images/b9/d7/8a/8132f82eb0df6fcbbed7ceeffc23c0662b8029f5.jpg"
+                "goods_id": "2645",
+                "name": "YINER音儿2016秋款/优雅浅蓝蝴蝶结修身显瘦女上衣86370120",
+                "price": "1782.00",
+                "s_url": "public/images/06/8a/cf/6c3a18d840e50483f7b3c37ab7b93fd2041b4802.jpg"
             },
             "cardInfo": {
                 "cpns_id": "2",
@@ -295,7 +301,8 @@ tags:
                     "total_amount": "100"
                 },
                 "condition_type": "0"
-            }
+            },
+            "inStock": false
         }
     }
     
@@ -308,6 +315,7 @@ tags:
 | price | decimal | 商品默认金额 |
 | s_url | url | 商品图片路径 |
 | cardInfo | obj | 卡券信息 可参照获取卡券列表参数 |
+| inStock | bool | 是否有库存 false为无可用库存,true为有可用库存 |
 
 
 > update_time:'2017.06.16'
