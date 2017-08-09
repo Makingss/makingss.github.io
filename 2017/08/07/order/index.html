@@ -19,7 +19,7 @@ method:默认
 
 
 
-update_time:’2017.03.04’
+update_time:’2017.08.09’
 
 
 获取订单">
@@ -41,11 +41,11 @@ method:默认
 
 
 
-update_time:’2017.03.04’
+update_time:’2017.08.09’
 
 
 获取订单">
-<meta property="og:updated_time" content="2017-08-07T09:04:06.587Z">
+<meta property="og:updated_time" content="2017-08-09T08:22:18.647Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="order">
 <meta name="twitter:description" content="文档说明
@@ -62,7 +62,7 @@ method:默认
 
 
 
-update_time:’2017.03.04’
+update_time:’2017.08.09’
 
 
 获取订单">
@@ -150,12 +150,12 @@ update_time:’2017.03.04’
 </code></pre></li>
 </ul>
 <blockquote>
-<p>update_time:’2017.03.04’</p>
+<p>update_time:’2017.08.09’</p>
 </blockquote>
 <hr>
 <h5 id="获取订单列表"><a href="#获取订单列表" class="headerlink" title="获取订单列表"></a>获取订单列表</h5><ul>
 <li><strong> 订单列表 </strong><blockquote>
-<p>api_name: register</p>
+<p>api_name: mobileapi.order.getUserOrderList</p>
 </blockquote>
 </li>
 </ul>
@@ -197,7 +197,11 @@ update_time:’2017.03.04’
 </table>
 <pre><code>    {
     &quot;rsp&quot;: &quot;succ&quot;,
-    &quot;res&quot;: &quot;success&quot;,
+    &quot;res&quot;: {
+        &quot;day&quot;: 0,
+        &quot;yesterday&quot;: 0,
+        &quot;weeks&quot;: 19610.84
+    },
     &quot;data&quot;: {
         &quot;170727153110140&quot;: [
             {
@@ -326,7 +330,28 @@ update_time:’2017.03.04’
 <td style="text-align:left">bool</td>
 <td style="text-align:left">Y</td>
 <td style="text-align:left">true</td>
-<td style="text-align:left">返回json字符串</td>
+<td style="text-align:left">返回json字符串。当type=5及分享购买时,会参数一个最近销售订单的金额</td>
+</tr>
+<tr>
+<td>day</td>
+<td style="text-align:left">float</td>
+<td style="text-align:left">N</td>
+<td style="text-align:left">1.00</td>
+<td style="text-align:left">统计今天的销售的金额</td>
+</tr>
+<tr>
+<td>yesterday</td>
+<td style="text-align:left">float</td>
+<td style="text-align:left">N</td>
+<td style="text-align:left">2.00</td>
+<td style="text-align:left">统计昨天的销售的金额</td>
+</tr>
+<tr>
+<td>weeks</td>
+<td style="text-align:left">float</td>
+<td style="text-align:left">N</td>
+<td style="text-align:left">3.00</td>
+<td style="text-align:left">统计一周的销售的金额</td>
 </tr>
 <tr>
 <td>data</td>
@@ -628,7 +653,7 @@ update_time:’2017.03.04’
 <hr>
 <ul>
 <li><strong> 订单详情 </strong><blockquote>
-<p>api_name: register</p>
+<p>api_name: mobileapi.order.getOrderDetails</p>
 </blockquote>
 </li>
 </ul>
@@ -679,7 +704,11 @@ update_time:’2017.03.04’
                 &quot;ship_status&quot;: &quot;0&quot;,
                 &quot;received_status&quot;: &quot;0&quot;,
                 &quot;status&quot;: &quot;active&quot;,
-                &quot;ship_email&quot;: null,
+                &quot;ship_area&quot;: &quot;广东省/深圳市/其它区&quot;,
+                &quot;ship_addr&quot;: &quot;大浪街道浪琴路8号影儿工业园商学院2楼&quot;,
+                &quot;ship_name&quot;: &quot;wuzaizhi&quot;,
+                &quot;ship_time&quot;: &quot;任意时间,任意时间段&quot;,
+                &quot;ship_mobile&quot;: &quot;157****8218&quot;,
                 &quot;total_amount&quot;: &quot;981.00&quot;,
                 &quot;origin_amount&quot;: &quot;981.00&quot;,
                 &quot;payed&quot;: &quot;0.00&quot;,
@@ -723,6 +752,11 @@ update_time:’2017.03.04’
                 &quot;total_amount&quot;: &quot;7152.00&quot;,
                 &quot;origin_amount&quot;: &quot;7152.00&quot;,
                 &quot;payed&quot;: &quot;0.00&quot;,
+                &quot;ship_area&quot;: &quot;广东省/深圳市/其它区&quot;,
+                &quot;ship_addr&quot;: &quot;大浪街道浪琴路8号影儿工业园商学院2楼&quot;,
+                &quot;ship_name&quot;: &quot;wuzaizhi&quot;,
+                &quot;ship_time&quot;: &quot;任意时间,任意时间段&quot;,
+                &quot;ship_mobile&quot;: &quot;157****8218&quot;,
                 &quot;received_time&quot;: 0,
                 &quot;sync_lijing&quot;: &quot;0&quot;,
                 &quot;payment&quot;: &quot;wxpayjsapi&quot;,
@@ -871,6 +905,560 @@ update_time:’2017.03.04’
 <td style="text-align:left">Y</td>
 <td style="text-align:left">“200.00”</td>
 <td style="text-align:left">实际支付金额</td>
+</tr>
+<tr>
+<td>ship_area</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“广东省/深圳市/其它区”</td>
+<td style="text-align:left">收货人区域</td>
+</tr>
+<tr>
+<td>ship_addr</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“大浪街道浪琴路8号影儿工业园商学院2楼”</td>
+<td style="text-align:left">收货人地址</td>
+</tr>
+<tr>
+<td>ship_name</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“200”</td>
+<td style="text-align:left">收货人姓名</td>
+</tr>
+<tr>
+<td>ship_time</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“任意时间,任意时间段”</td>
+<td style="text-align:left">送货时间</td>
+</tr>
+<tr>
+<td>ship_mobile</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“157<em>**</em>8218”</td>
+<td style="text-align:left">收货人手机号</td>
+</tr>
+<tr>
+<td>received_time</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">1502095150</td>
+<td style="text-align:left">确认收货时间</td>
+</tr>
+<tr>
+<td>sync_lijing</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">是否同步丽晶</td>
+</tr>
+<tr>
+<td>payment</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“wxpayjsapi”</td>
+<td style="text-align:left">支付方式 wxpayjsapi:微信支付</td>
+</tr>
+<tr>
+<td>buy_code</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">N</td>
+<td style="text-align:left">“12797”</td>
+<td style="text-align:left">分享购买会员ID</td>
+</tr>
+<tr>
+<td>product_id</td>
+<td style="text-align:left">sting</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“24792”</td>
+<td style="text-align:left">商品ID</td>
+</tr>
+<tr>
+<td>is_starbuy</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">是否是活动商品</td>
+</tr>
+<tr>
+<td>from_time</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">活动开始时间</td>
+</tr>
+<tr>
+<td>to_time</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">活动截止时间</td>
+</tr>
+<tr>
+<td>goods_id</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“5540”</td>
+<td style="text-align:left">商品ID</td>
+</tr>
+<tr>
+<td>s_url</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“public/images/bd/d8/39/cdd88e0069326366af1435da3fbe93e17efe7963.jpg”</td>
+<td style="text-align:left">缩略图图片</td>
+</tr>
+<tr>
+<td>aftersale_status</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">售后标记 1:已做过售后</td>
+</tr>
+<tr>
+<td>user_cancel_status</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">售前标记 1:已做过售前</td>
+</tr>
+<tr>
+<td>order_rule_discount</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">订单促销金额</td>
+</tr>
+<tr>
+<td>coupons_discount</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">优惠券促销金额</td>
+</tr>
+<tr>
+<td>currency_coupons_discount</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">通用券促销金额</td>
+</tr>
+<tr>
+<td>items_bn</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“808580550701540”</td>
+<td style="text-align:left">商品bn</td>
+</tr>
+<tr>
+<td>price</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">单件衣服价格</td>
+</tr>
+<tr>
+<td>sendnum</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“808580550701540”</td>
+<td style="text-align:left">商品bn</td>
+</tr>
+<tr>
+<td>nums</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“2”</td>
+<td style="text-align:left">购买衣服数量 多件会生成item_info中体现同款同码商品的item_id</td>
+</tr>
+<tr>
+<td>item_info</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">N</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">同款同码商品数据</td>
+</tr>
+<tr>
+<td>item_id</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“376821”</td>
+<td style="text-align:left">同上item_id</td>
+</tr>
+<tr>
+<td>aftersale_status</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">同上</td>
+</tr>
+<tr>
+<td>user_cancel_status</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">同上</td>
+</tr>
+<tr>
+<td>obj_id</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">同上</td>
+</tr>
+<tr>
+<td>order_rule_discount</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“0.00”</td>
+<td style="text-align:left">同上</td>
+</tr>
+<tr>
+<td>coupons_discount</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“0.00”</td>
+<td style="text-align:left">同上</td>
+</tr>
+<tr>
+<td>currency_coupons_discount</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“0.00”</td>
+<td style="text-align:left">同上</td>
+</tr>
+<tr>
+<td>final_amount</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“200”</td>
+<td style="text-align:left">支付金额</td>
+</tr>
+<tr>
+<td>obj_id</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">items表中的项目id</td>
+</tr>
+<tr>
+<td>item_id</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“376820”</td>
+<td style="text-align:left">项目ID</td>
+</tr>
+<tr>
+<td>goods_price</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“200”</td>
+<td style="text-align:left">单件商品金额</td>
+</tr>
+<tr>
+<td>product_price</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“200”</td>
+<td style="text-align:left">单件产品金额</td>
+</tr>
+<tr>
+<td>p_order_id</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">父order_id</td>
+</tr>
+<tr>
+<td>delivery_id</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">N</td>
+<td style="text-align:left">“120170703685533211”</td>
+<td style="text-align:left">发货单号,订单处于待收货状态，发货单能为空</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<ul>
+<li><strong> 获取售后列表 </strong><blockquote>
+<p>api_name:mobileapi.aftersales.getAfterSalesList </p>
+</blockquote>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th style="text-align:center">实例</th>
+<th style="text-align:right">说明</th>
+<th style="text-align:right">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用户名</td>
+<td style="text-align:center">member_id</td>
+<td style="text-align:right">12797</td>
+<td style="text-align:right">不能为空最长255字符</td>
+</tr>
+<tr>
+<td>偏移量</td>
+<td style="text-align:center">limit</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">取多少数量的内容</td>
+</tr>
+<tr>
+<td>页数</td>
+<td style="text-align:center">page</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">取第一页数量</td>
+</tr>
+</tbody>
+</table>
+<pre><code>    {
+    &quot;rsp&quot;: &quot;succ&quot;,
+    &quot;res&quot;: &quot;success&quot;,
+    &quot;data&quot;: {
+        &quot;170727153110140&quot;: [
+            {
+                &quot;order_id&quot;: &quot;170727153110140&quot;,
+                &quot;pay_status&quot;: &quot;1&quot;,
+                &quot;ship_status&quot;: &quot;0&quot;,
+                &quot;received_status&quot;: &quot;0&quot;,
+                &quot;status&quot;: &quot;active&quot;,
+                &quot;ship_area&quot;: &quot;广东省/深圳市/其它区&quot;,
+                &quot;ship_addr&quot;: &quot;大浪街道浪琴路8号影儿工业园商学院2楼&quot;,
+                &quot;ship_name&quot;: &quot;wuzaizhi&quot;,
+                &quot;ship_time&quot;: &quot;任意时间,任意时间段&quot;,
+                &quot;ship_mobile&quot;: &quot;157****8218&quot;,
+                &quot;total_amount&quot;: &quot;981.00&quot;,
+                &quot;origin_amount&quot;: &quot;981.00&quot;,
+                &quot;payed&quot;: &quot;0.00&quot;,
+                &quot;received_time&quot;: 0,
+                &quot;sync_lijing&quot;: &quot;0&quot;,
+                &quot;payment&quot;: &quot;wxpayjsapi&quot;,
+                &quot;buy_code&quot;: &quot;&quot;,
+                &quot;product_id&quot;: &quot;24792&quot;,
+                &quot;is_starbuy&quot;: 0,
+                &quot;name&quot;: &quot;YINER音儿GoodLand/优雅钩花V领收腰A字蕾丝连衣裙85805507&quot;,
+                &quot;from_time&quot;: null,
+                &quot;to_time&quot;: null,
+                &quot;goods_id&quot;: &quot;5540&quot;,
+                &quot;s_url&quot;: &quot;public/images/bd/d8/39/cdd88e0069326366af1435da3fbe93e17efe7963.jpg&quot;,
+                &quot;aftersale_status&quot;: &quot;0&quot;,
+                &quot;user_cancel_status&quot;: &quot;0&quot;,
+                &quot;order_rule_discount&quot;: &quot;0.00&quot;,
+                &quot;coupons_discount&quot;: &quot;0.00&quot;,
+                &quot;currency_coupons_discount&quot;: &quot;0.00&quot;,
+                &quot;items_bn&quot;: &quot;808580550701540&quot;,
+                &quot;price&quot;: &quot;981.00&quot;,
+                &quot;sendnum&quot;: &quot;0&quot;,
+                &quot;nums&quot;: &quot;1&quot;,
+                &quot;final_amount&quot;: &quot;981.00&quot;,
+                &quot;obj_id&quot;: &quot;372136&quot;,
+                &quot;item_id&quot;: &quot;419468&quot;,
+                &quot;goods_price&quot;: &quot;981.00&quot;,
+                &quot;product_price&quot;: &quot;981.00&quot;,
+                &quot;p_order_id&quot;: &quot;0&quot;,
+                &quot;delivery_id&quot;: null
+            }
+        ],
+        &quot;170727143748125&quot;: [
+            {
+                &quot;order_id&quot;: &quot;170727143748125&quot;,
+                &quot;pay_status&quot;: &quot;1&quot;,
+                &quot;ship_status&quot;: &quot;0&quot;,
+                &quot;received_status&quot;: &quot;0&quot;,
+                &quot;status&quot;: &quot;active&quot;,
+                &quot;ship_email&quot;: null,
+                &quot;total_amount&quot;: &quot;7152.00&quot;,
+                &quot;origin_amount&quot;: &quot;7152.00&quot;,
+                &quot;payed&quot;: &quot;0.00&quot;,
+                &quot;ship_area&quot;: &quot;广东省/深圳市/其它区&quot;,
+                &quot;ship_addr&quot;: &quot;大浪街道浪琴路8号影儿工业园商学院2楼&quot;,
+                &quot;ship_name&quot;: &quot;wuzaizhi&quot;,
+                &quot;ship_time&quot;: &quot;任意时间,任意时间段&quot;,
+                &quot;ship_mobile&quot;: &quot;157****8218&quot;,
+                &quot;received_time&quot;: 0,
+                &quot;sync_lijing&quot;: &quot;0&quot;,
+                &quot;payment&quot;: &quot;wxpayjsapi&quot;,
+                &quot;buy_code&quot;: &quot;&quot;,
+                &quot;product_id&quot;: &quot;7707&quot;,
+                &quot;is_starbuy&quot;: 0,
+                &quot;name&quot;: &quot;YINER音儿GoodLand/2016夏装新款 橙色长款层次拼接显瘦无袖连衣裙86205626&quot;,
+                &quot;from_time&quot;: null,
+                &quot;to_time&quot;: null,
+                &quot;goods_id&quot;: &quot;1801&quot;,
+                &quot;s_url&quot;: &quot;public/images/1e/42/9b/07bbca328efcf8dce4f8e2e7b20f3c1c9580de94.jpg&quot;,
+                &quot;aftersale_status&quot;: &quot;0&quot;,
+                &quot;user_cancel_status&quot;: &quot;0&quot;,
+                &quot;order_rule_discount&quot;: &quot;0.00&quot;,
+                &quot;coupons_discount&quot;: &quot;0.00&quot;,
+                &quot;currency_coupons_discount&quot;: &quot;0.00&quot;,
+                &quot;items_bn&quot;: &quot;808620562606142&quot;,
+                &quot;price&quot;: &quot;1788.00&quot;,
+                &quot;sendnum&quot;: &quot;0&quot;,
+                &quot;nums&quot;: 4,
+                &quot;final_amount&quot;: &quot;1788.00&quot;,
+                &quot;obj_id&quot;: &quot;329488&quot;,
+                &quot;item_id&quot;: &quot;376820&quot;,
+                &quot;goods_price&quot;: &quot;1788.00&quot;,
+                &quot;product_price&quot;: &quot;1788.00&quot;,
+                &quot;p_order_id&quot;: &quot;0&quot;,
+                &quot;delivery_id&quot;: null,
+                &quot;item_info&quot;: [
+                    {
+                        &quot;item_id&quot;: &quot;376821&quot;,
+                        &quot;aftersale_status&quot;: &quot;0&quot;,
+                        &quot;user_cancel_status&quot;: &quot;0&quot;,
+                        &quot;obj_id&quot;: &quot;329489&quot;,
+                        &quot;order_rule_discount&quot;: &quot;0.00&quot;,
+                        &quot;coupons_discount&quot;: &quot;0.00&quot;,
+                        &quot;currency_coupons_discount&quot;: &quot;0.00&quot;
+                    },
+                    {
+                        &quot;item_id&quot;: &quot;376822&quot;,
+                        &quot;aftersale_status&quot;: &quot;0&quot;,
+                        &quot;user_cancel_status&quot;: &quot;0&quot;,
+                        &quot;obj_id&quot;: &quot;329490&quot;,
+                        &quot;order_rule_discount&quot;: &quot;0.00&quot;,
+                        &quot;coupons_discount&quot;: &quot;0.00&quot;,
+                        &quot;currency_coupons_discount&quot;: &quot;0.00&quot;
+                    },
+                    {
+                        &quot;item_id&quot;: &quot;376823&quot;,
+                        &quot;aftersale_status&quot;: &quot;0&quot;,
+                        &quot;user_cancel_status&quot;: &quot;0&quot;,
+                        &quot;obj_id&quot;: &quot;329491&quot;,
+                        &quot;order_rule_discount&quot;: &quot;0.00&quot;,
+                        &quot;coupons_discount&quot;: &quot;0.00&quot;,
+                        &quot;currency_coupons_discount&quot;: &quot;0.00&quot;
+                    }
+                ]
+            }
+        ]
+    },
+    &quot;total_results&quot;: 0
+}
+</code></pre><table>
+<thead>
+<tr>
+<th>字段名</th>
+<th style="text-align:left">类型/长度</th>
+<th style="text-align:left">非必须</th>
+<th style="text-align:left">事例</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>res</td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">返回json字符串</td>
+</tr>
+<tr>
+<td>data</td>
+<td style="text-align:left">obj</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">返回结果状态</td>
+</tr>
+<tr>
+<td>order_id</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">170727153110140</td>
+<td style="text-align:left">订单号</td>
+</tr>
+<tr>
+<td>pay_status</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“1”</td>
+<td style="text-align:left">支付状态,’0’:未支付;’1’:已支付</td>
+</tr>
+<tr>
+<td>ship_status</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">发货状态,’0’:未支付;’1’:已支付</td>
+</tr>
+<tr>
+<td>received_status</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">收货状态,’0’:未支付;’1’:已支付</td>
+</tr>
+<tr>
+<td>status</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“active”</td>
+<td style="text-align:left">订单状态,”active”：有效;”dead”:作废;””;”finish”:完成;”cancel”:取消</td>
+</tr>
+<tr>
+<td>ship_email</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“636154”</td>
+<td style="text-align:left">收货人邮编</td>
+</tr>
+<tr>
+<td>total_amount</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“200.00”</td>
+<td style="text-align:left">优惠后订单金额</td>
+</tr>
+<tr>
+<td>origin_amount</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“500.00”</td>
+<td style="text-align:left">订单未优惠金额</td>
+</tr>
+<tr>
+<td>payed</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“200.00”</td>
+<td style="text-align:left">实际支付金额</td>
+</tr>
+<tr>
+<td>ship_area</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“广东省/深圳市/其它区”</td>
+<td style="text-align:left">收货人区域</td>
+</tr>
+<tr>
+<td>ship_addr</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“大浪街道浪琴路8号影儿工业园商学院2楼”</td>
+<td style="text-align:left">收货人地址</td>
+</tr>
+<tr>
+<td>ship_name</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“200”</td>
+<td style="text-align:left">收货人姓名</td>
+</tr>
+<tr>
+<td>ship_time</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“任意时间,任意时间段”</td>
+<td style="text-align:left">送货时间</td>
+</tr>
+<tr>
+<td>ship_mobile</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“157<em>**</em>8218”</td>
+<td style="text-align:left">收货人手机号</td>
 </tr>
 <tr>
 <td>received_time</td>
@@ -1110,7 +1698,7 @@ update_time:’2017.03.04’
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/07/order/" data-id="cj61xklvx0002zktt1mowzn6k" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/08/07/order/" data-id="cj64qyi8h0000a4ttl3nbwqwg" class="article-share-link">Share</a>
       
       
     </footer>
