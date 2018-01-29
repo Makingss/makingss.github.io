@@ -64,6 +64,366 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-store_center" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/29/store_center/" class="article-date">
+  <time datetime="2018-01-29T08:15:29.000Z" itemprop="datePublished">2018-01-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/29/store_center/">store_center</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="文档说明"><a href="#文档说明" class="headerlink" title="文档说明"></a>文档说明</h5><ul>
+<li>version:1.0</li>
+<li>url:path+’/api/‘+api_name</li>
+<li>platform:laravel+vue+vuex</li>
+<li>method:默认</li>
+<li>接口返回值默认格式:json</li>
+<li>接口返回值默认结构:<pre><code>{
+  res:true/false,
+  data:{},
+  msg:&apos;错误提示或者错误代码&apos;
+}
+</code></pre></li>
+</ul>
+<blockquote>
+<p>update_time:’2017.08.09’</p>
+</blockquote>
+<hr>
+<h5 id="微店数据"><a href="#微店数据" class="headerlink" title="微店数据"></a>微店数据</h5><ul>
+<li><strong> 微店个人中心 </strong><blockquote>
+<p>api_name: api/pc/store<br>type: GET</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"status"</span>: <span class="string">"success"</span>,</div><div class="line">    <span class="attr">"code"</span>: <span class="number">200</span>,</div><div class="line">    <span class="attr">"message"</span>: <span class="literal">null</span>,</div><div class="line">    <span class="attr">"modul"</span>: <span class="string">"Message"</span>,</div><div class="line">    <span class="attr">"data"</span>: &#123;</div><div class="line">        <span class="attr">"store_info"</span>: &#123;</div><div class="line">            <span class="attr">"uuid"</span>: <span class="string">"bff35b19-6faf-4adc-9037-372b38c16ea2"</span>,</div><div class="line">            <span class="attr">"conversions_num"</span>: <span class="number">0</span>,</div><div class="line">            <span class="attr">"member_num"</span>: <span class="number">1</span>,</div><div class="line">            <span class="attr">"store_name"</span>: <span class="string">"Prof. Bernie Legros"</span>,</div><div class="line">            <span class="attr">"level_name"</span>: <span class="string">"普通店铺"</span>,</div><div class="line">            <span class="attr">"level_logo_path"</span>: <span class="literal">null</span>,</div><div class="line">            <span class="attr">"avatar"</span>: <span class="string">"ea"</span>,</div><div class="line">            <span class="attr">"qr_code"</span>: <span class="string">"tenetur"</span>,</div><div class="line">            <span class="attr">"fans_num"</span>:<span class="number">10</span>,</div><div class="line">            <span class="attr">"looks"</span>: <span class="number">0</span></div><div class="line">        &#125;,</div><div class="line">        <span class="attr">"the_month"</span>: &#123;</div><div class="line">            <span class="attr">"order_num"</span>: <span class="number">7527</span>,</div><div class="line">            <span class="attr">"refund_num"</span>: <span class="number">6547</span>,</div><div class="line">            <span class="attr">"my_member_num"</span>: <span class="number">1</span>,</div><div class="line">            <span class="attr">"order_amount"</span>: <span class="number">-431233.34</span>,</div><div class="line">            <span class="attr">"refund_amount"</span>: <span class="number">-367244.05</span>,</div><div class="line">            <span class="attr">"profit"</span>: <span class="number">-63989.29</span></div><div class="line">        &#125;,</div><div class="line">        <span class="attr">"badge"</span>: &#123;</div><div class="line">            <span class="attr">"pending_payment"</span>: <span class="number">0</span>,</div><div class="line">            <span class="attr">"pending_ship"</span>: <span class="number">0</span>,</div><div class="line">            <span class="attr">"pending_received"</span>: <span class="number">0</span>,</div><div class="line">            <span class="attr">"after_sale"</span>: <span class="number">0</span>,</div><div class="line">            <span class="attr">"fans_num"</span>: <span class="number">0</span>,</div><div class="line">            <span class="attr">"order_num"</span>: <span class="number">0</span>,</div><div class="line">            <span class="attr">"refund_num"</span>: <span class="number">0</span>,</div><div class="line">            <span class="attr">"order_amount"</span>: <span class="number">0</span>,</div><div class="line">            <span class="attr">"refund_amount"</span>: <span class="number">0</span>,</div><div class="line">            <span class="attr">"profit"</span>: <span class="number">0</span></div><div class="line">        &#125;,</div><div class="line">        <span class="attr">"fans"</span>: [</div><div class="line">            &#123;</div><div class="line">                <span class="attr">"fans_type"</span>: <span class="number">0</span>,</div><div class="line">                <span class="attr">"type"</span>: <span class="number">4</span>,</div><div class="line">                <span class="attr">"member"</span>: &#123;</div><div class="line">                    <span class="attr">"uuid"</span>: <span class="string">"3644ca43-4e55-48d5-a5d8-2f250ec7f87c"</span>,</div><div class="line">                    <span class="attr">"nickname"</span>: <span class="string">"13981872066"</span>,</div><div class="line">                    <span class="attr">"avatar"</span>: <span class="literal">null</span></div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        ],</div><div class="line">        <span class="attr">"chart"</span>: &#123;</div><div class="line">            <span class="attr">"today"</span>: &#123;</div><div class="line">                <span class="attr">"2018-01-29-00"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-29-00"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-29-01"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-29-01"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-29-02"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-29-02"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-29-03"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-29-03"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-29-04"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-29-04"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-29-05"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-29-05"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-29-06"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-29-06"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-29-07"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-29-07"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-29-08"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-29-08"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-29-09"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-29-09"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-29-10"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-29-10"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;</div><div class="line">            &#125;,</div><div class="line">            <span class="attr">"yesterday"</span>: &#123;</div><div class="line">                <span class="attr">"2018-01-28-00"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-28-00"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-28-01"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-28-01"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-28-02"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-28-02"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-28-03"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-28-03"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-28-04"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-28-04"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-28-05"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-28-05"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-28-06"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-28-06"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-28-07"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-28-07"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-28-08"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-28-08"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-28-09"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-28-09"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-28-10"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-28-10"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-28-11"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-28-11"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-28-12"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-28-12"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-28-13"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-28-13"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-28-14"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-28-14"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-28-15"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-28-15"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-28-16"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-28-16"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-28-17"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-28-17"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-28-18"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-28-18"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-28-19"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-28-19"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-28-20"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-28-20"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-28-21"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-28-21"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-28-22"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-28-22"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;,</div><div class="line">                <span class="attr">"2018-01-28-23"</span>: &#123;</div><div class="line">                    <span class="attr">"hours"</span>: <span class="string">"2018-01-28-23"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th style="text-align:left">类型/长度</th>
+<th style="text-align:left">非必须</th>
+<th style="text-align:left">事例</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>store_info</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">微店基础信息</td>
+</tr>
+<tr>
+<td>uuid</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">bff35b19-6faf-4adc-9037-372b38c16ea2</td>
+<td style="text-align:left">UUID</td>
+</tr>
+<tr>
+<td>conversions_num</td>
+<td style="text-align:left">float</td>
+<td style="text-align:left">N</td>
+<td style="text-align:left">2.00</td>
+<td style="text-align:left">转粉总数</td>
+</tr>
+<tr>
+<td>member_num</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">会员总数</td>
+</tr>
+<tr>
+<td>store_name</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">测试店铺</td>
+<td style="text-align:left">店铺名称</td>
+</tr>
+<tr>
+<td>level_name</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">V1店铺</td>
+<td style="text-align:left">店铺等级</td>
+</tr>
+<tr>
+<td>level_logo_path</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left"><a href="http://app.com/avatar.png" target="_blank" rel="external">http://app.com/avatar.png</a></td>
+<td style="text-align:left">等级logo</td>
+</tr>
+<tr>
+<td>avatar</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left"><a href="http://app.com/avatar.png" target="_blank" rel="external">http://app.com/avatar.png</a></td>
+<td style="text-align:left">店铺头像</td>
+</tr>
+<tr>
+<td>qr_code</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left"><a href="http://app.com/avatar.png" target="_blank" rel="external">http://app.com/avatar.png</a></td>
+<td style="text-align:left">店铺二维码</td>
+</tr>
+<tr>
+<td>fans_num</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">90</td>
+<td style="text-align:left">粉丝数量</td>
+</tr>
+<tr>
+<td>looks</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">100</td>
+<td style="text-align:left">店铺浏览量</td>
+</tr>
+<tr>
+<td>the_month</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">本月数据</td>
+</tr>
+<tr>
+<td>order_num</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">本月销售订单数量</td>
+</tr>
+<tr>
+<td>refund_num</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">本月退款订单数量</td>
+</tr>
+<tr>
+<td>my_member_num</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">本月会员数</td>
+</tr>
+<tr>
+<td>order_amount</td>
+<td style="text-align:left">float</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">200.00</td>
+<td style="text-align:left">本月订单销售额</td>
+</tr>
+<tr>
+<td>refund_amount</td>
+<td style="text-align:left">float</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">210.00</td>
+<td style="text-align:left">本月退款额</td>
+</tr>
+<tr>
+<td>profit</td>
+<td style="text-align:left">float</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-10.00</td>
+<td style="text-align:left">本月营业额</td>
+</tr>
+<tr>
+<td>badge</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">角标</td>
+</tr>
+<tr>
+<td>pending_payment</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">等待支付的数量</td>
+</tr>
+<tr>
+<td>pending_ship</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">等待发货的数量</td>
+</tr>
+<tr>
+<td>pending_received</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">等待收货的数量</td>
+</tr>
+<tr>
+<td>after_sale</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">售后需要处理数量</td>
+</tr>
+<tr>
+<td>fans_num</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">当日粉丝的数量</td>
+</tr>
+<tr>
+<td>order_num</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">当日订单数量的数量</td>
+</tr>
+<tr>
+<td>refund_num</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">当日退款数量</td>
+</tr>
+<tr>
+<td>order_amount</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">当日销售额</td>
+</tr>
+<tr>
+<td>refund_amount</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">当日退款额</td>
+</tr>
+<tr>
+<td>profit</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">当日营业额</td>
+</tr>
+<tr>
+<td>fans</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">会员数和转粉数会员的动态信息</td>
+</tr>
+<tr>
+<td>fans_type</td>
+<td style="text-align:left">enum[0,1]</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">0:会员数1:转粉数</td>
+</tr>
+<tr>
+<td>type</td>
+<td style="text-align:left">enum[0,1,2]</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">会员动态类型,0:该会员登录过,1:该会员浏览过商品,2:购买过商品</td>
+</tr>
+<tr>
+<td>member</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">会员数或者转粉数的基础信息</td>
+</tr>
+<tr>
+<td>uuid</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">3644ca43-4e55-48d5-a5d8-2f250ec7f87c</td>
+<td style="text-align:left">会员ID</td>
+</tr>
+<tr>
+<td>nickname</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">昵称</td>
+<td style="text-align:left">会员昵称</td>
+</tr>
+<tr>
+<td>avatar</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left"><a href="http://app.com/avatar.png" target="_blank" rel="external">http://app.com/avatar.png</a></td>
+<td style="text-align:left">会员头像</td>
+</tr>
+<tr>
+<td>chart</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">图表,today：今日销售额 yesterday：昨日销售额</td>
+</tr>
+<tr>
+<td>today.*</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">2018-01-29-00</td>
+<td style="text-align:left">时间段的简直末尾固定两位长度表示时间段，00-23，每1小时中的数据</td>
+</tr>
+<tr>
+<td>today.*.amount</td>
+<td style="text-align:left">float</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">200.00</td>
+<td style="text-align:left">该小时段的是销售额</td>
+</tr>
+<tr>
+<td>yestoday.*</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">2018-01-29-00</td>
+<td style="text-align:left">同上</td>
+</tr>
+<tr>
+<td>yestoday.*.amount</td>
+<td style="text-align:left">float</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">200.00</td>
+<td style="text-align:left">同上</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/01/29/store_center/" data-id="cjcznsn450001zgtt3keu7spm" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-order" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/08/07/order/" class="article-date">
@@ -1784,7 +2144,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/07/order/" data-id="cj6g2h8ra0003nsttgitju2ht" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/08/07/order/" data-id="cjcznsn3x0000zgttzqamg8g4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -2511,7 +2871,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/25/yinger-card/" data-id="cj6g2h8r70001nsttxqsnorli" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/25/yinger-card/" data-id="cjcznsn490002zgtt8had3rt3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -2683,7 +3043,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/14/db/" data-id="cj6g2h8r20000nsttbzls7e52" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/04/14/db/" data-id="cjcznsn4m0003zgtto3vhapen" class="article-share-link">Share</a>
       
       
     </footer>
@@ -3104,7 +3464,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/24/grentench/" data-id="cj6g2h8r90002nsttfvgq9w5z" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/24/grentench/" data-id="cjcznsn5f0004zgtt6ypby2hh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -3131,7 +3491,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li></ul>
     </div>
   </div>
 
@@ -3142,6 +3502,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/01/29/store_center/">store_center</a>
+          </li>
         
           <li>
             <a href="/2017/08/07/order/">order</a>
@@ -3171,7 +3535,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 yingerfashion<br>
+      &copy; 2018 yingerfashion<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
