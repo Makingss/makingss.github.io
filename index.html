@@ -134,7 +134,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/31/font_print/" data-id="cjd5cgke00001cottqg0ro3gc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/01/31/font_print/" data-id="cjd5cs7o00001j8tteag5267v" class="article-share-link">Share</a>
       
       
     </footer>
@@ -511,11 +511,87 @@
 </tr>
 </tbody>
 </table>
+<ul>
+<li><strong> 微店个人中心图表数据查询 </strong><blockquote>
+<p>api_name: api/pc/store_chart<br>type: POST</p>
+</blockquote>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th style="text-align:left">类型/长度</th>
+<th style="text-align:left">非必须</th>
+<th style="text-align:left">事例</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>start_time</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">1517270400</td>
+<td style="text-align:left">开始时间,start_time和end_time存在可不用传递length字段</td>
+</tr>
+<tr>
+<td>end_time</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">1517534541</td>
+<td style="text-align:left">截止时间，start_time和end_time存在可不用传递length字段</td>
+</tr>
+<tr>
+<td>type</td>
+<td style="text-align:left">enum[‘hour’,’day’,’month’]</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“day”</td>
+<td style="text-align:left">截止时间</td>
+</tr>
+<tr>
+<td>length</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-1</td>
+<td style="text-align:left">查询范围 -1,-7,-30 分别代表前1天，前7天，前30天。注意如果该值存在 可以不用传递start_time和end_time字段</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="json">{
+    <span class="attr">"chart"</span>: {
+        <span class="attr">"2018-01-30"</span>: {
+            <span class="attr">"day"</span>: <span class="string">"2018-01-30"</span>,
+            <span class="attr">"amount"</span>: <span class="string">"0.00"</span>
+        },
+        <span class="attr">"2018-01-31"</span>: {
+            <span class="attr">"day"</span>: <span class="string">"2018-01-31"</span>,
+            <span class="attr">"amount"</span>: <span class="string">"3258.65"</span>
+        },
+        <span class="attr">"2018-02-01"</span>: {
+            <span class="attr">"day"</span>: <span class="string">"2018-02-01"</span>,
+            <span class="attr">"amount"</span>: <span class="string">"2571.69"</span>
+        },
+        <span class="attr">"2018-02-02"</span>: {
+            <span class="attr">"day"</span>: <span class="string">"2018-02-02"</span>,
+            <span class="attr">"amount"</span>: <span class="string">"0.00"</span>
+        }
+    },
+    <span class="attr">"panel"</span>: {
+        <span class="attr">"fans"</span>: <span class="number">1</span>,
+        <span class="attr">"order_num"</span>: <span class="number">200</span>,
+        <span class="attr">"refund_num"</span>: <span class="number">1</span>,
+        <span class="attr">"order_amount"</span>: <span class="string">"491502.64"</span>,
+        <span class="attr">"refund_amount"</span>: <span class="string">"-23780.42"</span>,
+        <span class="attr">"profit"</span>: <span class="string">"467722.22"</span>
+    }
+}
+</code></pre>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/29/store_center/" data-id="cjd5cgkeb0003cottk6owcy71" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/01/29/store_center/" data-id="cjd5cs7o80004j8ttrpjnrmiu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -2245,7 +2321,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/07/order/" data-id="cjd5cgkec0004cotttjuxjfnj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/08/07/order/" data-id="cjd5cs7o60003j8tt54vaz53b" class="article-share-link">Share</a>
       
       
     </footer>
@@ -2972,7 +3048,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/25/yinger-card/" data-id="cjd5cgkeg0005cottg7mncsgw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/25/yinger-card/" data-id="cjd5cs7oa0005j8tt43todxzj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -3144,7 +3220,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/14/db/" data-id="cjd5cgkdv0000cotte5yo1ue5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/04/14/db/" data-id="cjd5cs7nv0000j8ttuflb9cxr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -3565,7 +3641,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/24/grentench/" data-id="cjd5cgke80002cott8uqvux4d" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/24/grentench/" data-id="cjd5cs7o40002j8tto785zty7" class="article-share-link">Share</a>
       
       
     </footer>
