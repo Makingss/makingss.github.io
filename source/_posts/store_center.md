@@ -19,8 +19,8 @@ tags:
 > update_time:'2017.08.09'
 
 ---
-##### 获取微店中心
--  ** 微店中心 **
+##### 微店数据
+-  ** 微店个人中心 **
 > api_name: api/pc/store
 > type: GET
 
@@ -218,6 +218,10 @@ tags:
                     "hours": "2018-01-28-23",
                     "amount": "0.00"
                 }
+            },
+             "config": {
+                "min_time": 1514770090,
+                "max_time": 1517534890
             }
         }
     }
@@ -234,7 +238,7 @@ tags:
 | level_logo_path | string | Y | http://app.com/avatar.png | 等级logo |
 | avatar | string | Y | http://app.com/avatar.png | 店铺头像  |
 | qr_code | string | Y | http://app.com/avatar.png | 店铺二维码 |
-| fans_num | int | Y | 90 | 粉丝数量 |
+| fans_num | int | Y | 90 | 粉丝数量,注意该粉丝数仅仅代表该微店用户做为普通用户时的粉丝，区别与会员数和转粉数 |
 | looks | int | Y | 100 | 店铺浏览量 |
 | the_month | array | Y | - | 本月数据 |
 | order_num | int | Y | 1 | 本月销售订单数量 |
@@ -255,6 +259,7 @@ tags:
 | refund_amount | int | Y | 0 | 当日退款额 |
 | profit | int | Y | 0 | 当日营业额 |
 | fans | array | Y | - | 会员数和转粉数会员的动态信息 |
+| created_at | datetime | Y | 2018-01-23 14:56:39 | 操作记录时间 |
 | fans_type | enum[0,1] | Y | 0 | 0:会员数1:转粉数 |
 | type | enum[0,1,2] | Y | 0 | 会员动态类型,0:该会员登录过,1:该会员浏览过商品,2:购买过商品 |
 | member | array | Y | - | 会员数或者转粉数的基础信息 |
@@ -262,7 +267,52 @@ tags:
 | nickname | string | Y | 昵称 | 会员昵称 |
 | avatar | string | Y | http://app.com/avatar.png | 会员头像 |
 | chart | array | Y | - | 图表,today：今日销售额 yesterday：昨日销售额 |
-| today.* | array | Y | 2018-01-29-00 | 时间段的简直末尾固定两位长度表示时间段，00-23，每1小时中的数据 |
+| today.* | array | Y | 2018-01-29-00 | 时间段的末尾固定两位长度00-23，b表示每1小时中的数据 |
 | today.*.amount | float | Y | 200.00 | 该小时段的是销售额 |
 | yestoday.* | array | Y | 2018-01-29-00 | 同上 |
 | yestoday.*.amount | float | Y | 200.00 | 同上 |
+| config.*.mix | int | Y | 1514770090 | 图表查询的时间范围最小值 |
+| config.*.max | int | Y | 1517534890 | 图表查询的时间范围最大值 |
+
+
+-  ** 微店个人中心图表数据查询 **
+> api_name: api/pc/store_chart
+> type: POST
+
+| 字段名 | 类型/长度 | 非必须 | 事例 |备注 |
+| -----|:-------|:-------|:-----|:--------|
+|start_time| int | Y | 1517270400 | 开始时间,start_time和end_time存在可不用传递length字段 |
+|end_time | int | Y | 1517534541 | 截止时间，start_time和end_time存在可不用传递length字段 |
+|type | enum['hour','day','month'] | Y | "day" | 截止时间 |
+|length | int | Y | -1 | 查询范围 -1,-7,-30 分别代表前1天，前7天，前30天。注意如果该值存在 可以不用传递start_time和end_time字段 |
+
+```json
+{
+    "chart": {
+        "2018-01-30": {
+            "day": "2018-01-30",
+            "amount": "0.00"
+        },
+        "2018-01-31": {
+            "day": "2018-01-31",
+            "amount": "3258.65"
+        },
+        "2018-02-01": {
+            "day": "2018-02-01",
+            "amount": "2571.69"
+        },
+        "2018-02-02": {
+            "day": "2018-02-02",
+            "amount": "0.00"
+        }
+    },
+    "panel": {
+        "fans": 1,
+        "order_num": 200,
+        "refund_num": 1,
+        "order_amount": "491502.64",
+        "refund_amount": "-23780.42",
+        "profit": "467722.22"
+    }
+}
+``` 
