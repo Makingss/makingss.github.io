@@ -271,7 +271,7 @@ tags:
 | today.*.amount | float | Y | 200.00 | 该小时段的是销售额 |
 | yestoday.* | array | Y | 2018-01-29-00 | 同上 |
 | yestoday.*.amount | float | Y | 200.00 | 同上 |
-| config.*.mix | int | Y | 1514770090 | 图表查询的时间范围最小值 |
+| config.*.min | int | Y | 1514770090 | 图表查询的时间范围最小值 |
 | config.*.max | int | Y | 1517534890 | 图表查询的时间范围最大值 |
 
 
@@ -315,4 +315,58 @@ tags:
         "profit": "467722.22"
     }
 }
-``` 
+```
+
+- ** 微店个人中心销售额和销售量数据 **
+> api_name: api/pc/store_sale_info
+> type: GET
+
+```json
+{
+    "sale_amount": [
+        {
+            "amount": "3887231.11",
+            "goods_id": 8,
+            "goods": {
+                "id": 8,
+                "name": "Mrs. Kyla Harris",
+                "price": "78.64",
+                "mktprice": "20.43",
+                "brand_id": 624,
+                "goods_brands": null
+            }
+        },
+    ],
+    "sale_num": [
+        {
+            "num": 15424,
+            "goods_id": 2,
+            "goods": {
+                "id": 2,
+                "name": "Ms. Florine Franecki Jr.",
+                "price": "85.50",
+                "mktprice": "54.67",
+                "brand_id": 2,
+                "goods_brands": {
+                    "id": 2,
+                    "brand_name": "aut"
+                }
+            }
+        }
+        ]
+}
+```
+
+| 字段名 | 类型/长度 | 非必须 | 事例 |备注 |
+| -----|:-------|:-------|:-----|:--------|
+|sale_amount| array | Y | - | 销售额数据 |
+|amount | string | Y | 3887231.00 | 单件商品最大销售金额 |
+|goods_id| intger | Y | 8 | 商品ID |
+|goods| array | Y | - | 商品信息数据 |
+|name| string | Y |连衣裙 | 商品名称 |
+|price | string | Y | 100.00 | 商品下单金额 |
+|mktprice | string | Y | 100.00 | 商品市场金额 |
+|brand_id| array | Y | 2 | 品牌ID |
+|brand_name| string | Y | 恩裳 | 品牌名称 |
+|sale_num| array | Y | - | 销售数量数据|
+|num| int | Y | 10 | 单件商品销售数量 |
