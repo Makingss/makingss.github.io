@@ -134,7 +134,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/31/font_print/" data-id="cjd5d7i6400016kttzkvnnbre" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/01/31/font_print/" data-id="cjdi827ck0000l8tt2j5l4348" class="article-share-link">Share</a>
       
       
     </footer>
@@ -558,40 +558,109 @@
 </tr>
 </tbody>
 </table>
-<pre><code class="json">{
-    <span class="attr">"chart"</span>: {
-        <span class="attr">"2018-01-30"</span>: {
-            <span class="attr">"day"</span>: <span class="string">"2018-01-30"</span>,
-            <span class="attr">"amount"</span>: <span class="string">"0.00"</span>
-        },
-        <span class="attr">"2018-01-31"</span>: {
-            <span class="attr">"day"</span>: <span class="string">"2018-01-31"</span>,
-            <span class="attr">"amount"</span>: <span class="string">"3258.65"</span>
-        },
-        <span class="attr">"2018-02-01"</span>: {
-            <span class="attr">"day"</span>: <span class="string">"2018-02-01"</span>,
-            <span class="attr">"amount"</span>: <span class="string">"2571.69"</span>
-        },
-        <span class="attr">"2018-02-02"</span>: {
-            <span class="attr">"day"</span>: <span class="string">"2018-02-02"</span>,
-            <span class="attr">"amount"</span>: <span class="string">"0.00"</span>
-        }
-    },
-    <span class="attr">"panel"</span>: {
-        <span class="attr">"fans"</span>: <span class="number">1</span>,
-        <span class="attr">"order_num"</span>: <span class="number">200</span>,
-        <span class="attr">"refund_num"</span>: <span class="number">1</span>,
-        <span class="attr">"order_amount"</span>: <span class="string">"491502.64"</span>,
-        <span class="attr">"refund_amount"</span>: <span class="string">"-23780.42"</span>,
-        <span class="attr">"profit"</span>: <span class="string">"467722.22"</span>
-    }
-}
-</code></pre>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"chart"</span>: &#123;</div><div class="line">        <span class="attr">"2018-01-30"</span>: &#123;</div><div class="line">            <span class="attr">"day"</span>: <span class="string">"2018-01-30"</span>,</div><div class="line">            <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">        &#125;,</div><div class="line">        <span class="attr">"2018-01-31"</span>: &#123;</div><div class="line">            <span class="attr">"day"</span>: <span class="string">"2018-01-31"</span>,</div><div class="line">            <span class="attr">"amount"</span>: <span class="string">"3258.65"</span></div><div class="line">        &#125;,</div><div class="line">        <span class="attr">"2018-02-01"</span>: &#123;</div><div class="line">            <span class="attr">"day"</span>: <span class="string">"2018-02-01"</span>,</div><div class="line">            <span class="attr">"amount"</span>: <span class="string">"2571.69"</span></div><div class="line">        &#125;,</div><div class="line">        <span class="attr">"2018-02-02"</span>: &#123;</div><div class="line">            <span class="attr">"day"</span>: <span class="string">"2018-02-02"</span>,</div><div class="line">            <span class="attr">"amount"</span>: <span class="string">"0.00"</span></div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">"panel"</span>: &#123;</div><div class="line">        <span class="attr">"fans"</span>: <span class="number">1</span>,</div><div class="line">        <span class="attr">"order_num"</span>: <span class="number">200</span>,</div><div class="line">        <span class="attr">"refund_num"</span>: <span class="number">1</span>,</div><div class="line">        <span class="attr">"order_amount"</span>: <span class="string">"491502.64"</span>,</div><div class="line">        <span class="attr">"refund_amount"</span>: <span class="string">"-23780.42"</span>,</div><div class="line">        <span class="attr">"profit"</span>: <span class="string">"467722.22"</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><strong> 微店个人中心销售额和销售量数据 </strong><blockquote>
+<p>api_name: api/pc/store_sale_info<br>type: GET</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"sale_amount"</span>: [</div><div class="line">        &#123;</div><div class="line">            <span class="attr">"amount"</span>: <span class="string">"3887231.11"</span>,</div><div class="line">            <span class="attr">"goods_id"</span>: <span class="number">8</span>,</div><div class="line">            <span class="attr">"goods"</span>: &#123;</div><div class="line">                <span class="attr">"id"</span>: <span class="number">8</span>,</div><div class="line">                <span class="attr">"name"</span>: <span class="string">"Mrs. Kyla Harris"</span>,</div><div class="line">                <span class="attr">"price"</span>: <span class="string">"78.64"</span>,</div><div class="line">                <span class="attr">"mktprice"</span>: <span class="string">"20.43"</span>,</div><div class="line">                <span class="attr">"brand_id"</span>: <span class="number">624</span>,</div><div class="line">                <span class="attr">"goods_brands"</span>: <span class="literal">null</span></div><div class="line">            &#125;</div><div class="line">        &#125;,</div><div class="line">    ],</div><div class="line">    <span class="attr">"sale_num"</span>: [</div><div class="line">        &#123;</div><div class="line">            <span class="attr">"num"</span>: <span class="number">15424</span>,</div><div class="line">            <span class="attr">"goods_id"</span>: <span class="number">2</span>,</div><div class="line">            <span class="attr">"goods"</span>: &#123;</div><div class="line">                <span class="attr">"id"</span>: <span class="number">2</span>,</div><div class="line">                <span class="attr">"name"</span>: <span class="string">"Ms. Florine Franecki Jr."</span>,</div><div class="line">                <span class="attr">"price"</span>: <span class="string">"85.50"</span>,</div><div class="line">                <span class="attr">"mktprice"</span>: <span class="string">"54.67"</span>,</div><div class="line">                <span class="attr">"brand_id"</span>: <span class="number">2</span>,</div><div class="line">                <span class="attr">"goods_brands"</span>: &#123;</div><div class="line">                    <span class="attr">"id"</span>: <span class="number">2</span>,</div><div class="line">                    <span class="attr">"brand_name"</span>: <span class="string">"aut"</span></div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th style="text-align:left">类型/长度</th>
+<th style="text-align:left">非必须</th>
+<th style="text-align:left">事例</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sale_amount</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">销售额数据</td>
+</tr>
+<tr>
+<td>amount</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">3887231.00</td>
+<td style="text-align:left">单件商品最大销售金额</td>
+</tr>
+<tr>
+<td>goods_id</td>
+<td style="text-align:left">intger</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left">商品ID</td>
+</tr>
+<tr>
+<td>goods</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">商品信息数据</td>
+</tr>
+<tr>
+<td>name</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">连衣裙</td>
+<td style="text-align:left">商品名称</td>
+</tr>
+<tr>
+<td>price</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">100.00</td>
+<td style="text-align:left">商品下单金额</td>
+</tr>
+<tr>
+<td>mktprice</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">100.00</td>
+<td style="text-align:left">商品市场金额</td>
+</tr>
+<tr>
+<td>brand_id</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">品牌ID</td>
+</tr>
+<tr>
+<td>brand_name</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">恩裳</td>
+<td style="text-align:left">品牌名称</td>
+</tr>
+<tr>
+<td>sale_num</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">销售数量数据</td>
+</tr>
+<tr>
+<td>num</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left">单件商品销售数量</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/29/store_center/" data-id="cjd5d7i6b00046kttdggj92hg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/01/29/store_center/" data-id="cjdi827dh0003l8ttq14qbruz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -2321,7 +2390,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/07/order/" data-id="cjd5d7i6a00036kttbkv69lte" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/08/07/order/" data-id="cjdi827cu0002l8tt819380dx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -3048,7 +3117,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/25/yinger-card/" data-id="cjd5d7i6d00056kttfv6hfpa0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/25/yinger-card/" data-id="cjdi827dy0005l8ttnucjqbmg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -3220,7 +3289,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/14/db/" data-id="cjd5d7i6000006ktt3ayveeos" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/04/14/db/" data-id="cjdi827cr0001l8tt1a9xqg7l" class="article-share-link">Share</a>
       
       
     </footer>
@@ -3641,7 +3710,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/24/grentench/" data-id="cjd5d7i6700026kttjzb7k69n" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/24/grentench/" data-id="cjdi827ds0004l8ttf4g21usf" class="article-share-link">Share</a>
       
       
     </footer>
