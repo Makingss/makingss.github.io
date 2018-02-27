@@ -319,10 +319,20 @@ tags:
 
 - ** 微店个人中心销售额和销售量数据 **
 > api_name: api/pc/store_sale_info
-> type: GET
+> type: POST
+
+| 字段名 | 类型/长度 | 非必须 | 事例 |备注 |
+| -----|:-------|:-------|:-----|:--------|
+|start_time| int | Y | 1518220800 | 查询开始时间 |
+|end_time | int | Y | 1518307200 | 查询截止时间 |
 
 ```json
 {
+        "status": "success",
+    "code": 200,
+    "message": null,
+    "modul": "Message",
+    "data": {
     "sale_amount": [
         {
             "amount": "3887231.11",
@@ -354,6 +364,7 @@ tags:
             }
         }
         ]
+    }
 }
 ```
 
@@ -370,3 +381,66 @@ tags:
 |brand_name| string | Y | 恩裳 | 品牌名称 |
 |sale_num| array | Y | - | 销售数量数据|
 |num| int | Y | 10 | 单件商品销售数量 |
+
+- ** 微店个人中心会员动态 **
+> api_name: api/pc/store_member_state
+> type: GET
+
+```json
+[
+    {
+        "type": 0,
+        "fans_type": 1,
+        "nickname": "13981872066",
+        "uuid": "3644ca43-4e55-48d5-a5d8-2f250ec7f87c",
+        "info": {
+            "desc": "会员登录",
+            "more": {
+                "address": [
+                    "XX",
+                    "XX",
+                    "内网IP",
+                    "内网IP"
+                ],
+                "client": "Windows 10---Chrome(63.0.3239.132)",
+                "ip": "127.0.0.1"
+            },
+            "created_at": "3周前"
+        }
+    },
+    {
+        "type": 1,
+        "fans_type": 0,
+        "nickname": "13981872066",
+        "uuid": "3644ca43-4e55-48d5-a5d8-2f250ec7f87c",
+        "info": {
+            "desc": "浏览商品",
+            "more": {
+                "name": "YINER音儿2017冬新款中长款纯羊毛双面呢大衣女8C57580330",
+                "img_path": "/storage/images/goods/list/2P36RtQDVgpAuJIa0Z5xj1itEyqF5DRXUvCySGYU.jpeg",
+                "goods_id": 1
+            },
+            "created_at": "3周前"
+        }
+    }
+]
+```
+
+| 字段名 | 类型/长度 | 非必须 | 事例 |备注 |
+| -----|:-------|:-------|:-----|:--------|
+|type| int | Y | 1 | 动态类型，0：会员登录 1：浏览商品 2：购买商品 |
+|fans_type | int | Y | 1 | 粉丝类型 0:会员数 1：转粉数 |
+|nickname| string | Y | "小伙子" | 会员昵称 |
+|uuid| string | Y | 3644ca43-4e55-48d5-a5d8-2f250ec7f87c | 会员唯一识别号 |
+|desc| string | Y | "浏览商品" | 会员动态描述 |
+|more | array | Y | - | 详细信息，商品数据、登录信息 |
+|name | string | Y | YINER音儿2017冬新款中长款纯羊毛双面呢大衣女8C57580330 | 商品名称 |
+|img_path| string | Y | url | 商品封面图 |
+|goods_id| intger | Y | - | 商品ID |
+|created_at| string | Y | 3周前 | 动态产生时间 |
+|address| array | Y | - | 登录地址信息 |
+|address.0| string | Y | 中国 | 国家 |
+|address.1| string | Y | 广东 | 省份 |
+|address.2| string | Y | 深圳 | 市区 |
+|address.3| string | Y | 电信 | 网络运营商 |
+|client| string | Y | Windows 10---Chrome(63.0.3239.132) | 设备信息 |
