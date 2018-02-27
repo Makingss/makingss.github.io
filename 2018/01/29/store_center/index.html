@@ -45,7 +45,7 @@ update_time:’2017.08.09’
 
 
 微店数据">
-<meta property="og:updated_time" content="2018-02-11T05:14:16.312Z">
+<meta property="og:updated_time" content="2018-02-27T09:36:21.133Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="store_center">
 <meta name="twitter:description" content="文档说明
@@ -653,11 +653,143 @@ update_time:’2017.08.09’
 </tr>
 </tbody>
 </table>
+<ul>
+<li><strong> 微店个人中心会员动态 </strong><blockquote>
+<p>api_name: api/pc/store_member_state<br>type: GET</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">[</div><div class="line">    &#123;</div><div class="line">        <span class="attr">"type"</span>: <span class="number">0</span>,</div><div class="line">        <span class="attr">"fans_type"</span>: <span class="number">1</span>,</div><div class="line">        <span class="attr">"nickname"</span>: <span class="string">"13981872066"</span>,</div><div class="line">        <span class="attr">"uuid"</span>: <span class="string">"3644ca43-4e55-48d5-a5d8-2f250ec7f87c"</span>,</div><div class="line">        <span class="attr">"info"</span>: &#123;</div><div class="line">            <span class="attr">"desc"</span>: <span class="string">"会员登录"</span>,</div><div class="line">            <span class="attr">"more"</span>: &#123;</div><div class="line">                <span class="attr">"address"</span>: [</div><div class="line">                    <span class="string">"XX"</span>,</div><div class="line">                    <span class="string">"XX"</span>,</div><div class="line">                    <span class="string">"内网IP"</span>,</div><div class="line">                    <span class="string">"内网IP"</span></div><div class="line">                ],</div><div class="line">                <span class="attr">"client"</span>: <span class="string">"Windows 10---Chrome(63.0.3239.132)"</span>,</div><div class="line">                <span class="attr">"ip"</span>: <span class="string">"127.0.0.1"</span></div><div class="line">            &#125;,</div><div class="line">            <span class="attr">"created_at"</span>: <span class="string">"3周前"</span></div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">        <span class="attr">"type"</span>: <span class="number">1</span>,</div><div class="line">        <span class="attr">"fans_type"</span>: <span class="number">0</span>,</div><div class="line">        <span class="attr">"nickname"</span>: <span class="string">"13981872066"</span>,</div><div class="line">        <span class="attr">"uuid"</span>: <span class="string">"3644ca43-4e55-48d5-a5d8-2f250ec7f87c"</span>,</div><div class="line">        <span class="attr">"info"</span>: &#123;</div><div class="line">            <span class="attr">"desc"</span>: <span class="string">"浏览商品"</span>,</div><div class="line">            <span class="attr">"more"</span>: &#123;</div><div class="line">                <span class="attr">"name"</span>: <span class="string">"YINER音儿2017冬新款中长款纯羊毛双面呢大衣女8C57580330"</span>,</div><div class="line">                <span class="attr">"img_path"</span>: <span class="string">"/storage/images/goods/list/2P36RtQDVgpAuJIa0Z5xj1itEyqF5DRXUvCySGYU.jpeg"</span>,</div><div class="line">                <span class="attr">"goods_id"</span>: <span class="number">1</span></div><div class="line">            &#125;,</div><div class="line">            <span class="attr">"created_at"</span>: <span class="string">"3周前"</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">]</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th style="text-align:left">类型/长度</th>
+<th style="text-align:left">非必须</th>
+<th style="text-align:left">事例</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">动态类型，0：会员登录 1：浏览商品 2：购买商品</td>
+</tr>
+<tr>
+<td>fans_type</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">粉丝类型 0:会员数 1：转粉数</td>
+</tr>
+<tr>
+<td>nickname</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“小伙子”</td>
+<td style="text-align:left">会员昵称</td>
+</tr>
+<tr>
+<td>uuid</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">3644ca43-4e55-48d5-a5d8-2f250ec7f87c</td>
+<td style="text-align:left">会员唯一识别号</td>
+</tr>
+<tr>
+<td>desc</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“浏览商品”</td>
+<td style="text-align:left">会员动态描述</td>
+</tr>
+<tr>
+<td>more</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">详细信息，商品数据、登录信息</td>
+</tr>
+<tr>
+<td>name</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">YINER音儿2017冬新款中长款纯羊毛双面呢大衣女8C57580330</td>
+<td style="text-align:left">商品名称</td>
+</tr>
+<tr>
+<td>img_path</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">url</td>
+<td style="text-align:left">商品封面图</td>
+</tr>
+<tr>
+<td>goods_id</td>
+<td style="text-align:left">intger</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">商品ID</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">3周前</td>
+<td style="text-align:left">动态产生时间</td>
+</tr>
+<tr>
+<td>address</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">登录地址信息</td>
+</tr>
+<tr>
+<td>address.0</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">中国</td>
+<td style="text-align:left">国家</td>
+</tr>
+<tr>
+<td>address.1</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">广东</td>
+<td style="text-align:left">省份</td>
+</tr>
+<tr>
+<td>address.2</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">深圳</td>
+<td style="text-align:left">市区</td>
+</tr>
+<tr>
+<td>address.3</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">电信</td>
+<td style="text-align:left">网络运营商</td>
+</tr>
+<tr>
+<td>client</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">Windows 10—Chrome(63.0.3239.132)</td>
+<td style="text-align:left">设备信息</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/29/store_center/" data-id="cjdic56rv0005u8ttcbibp1zs" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/01/29/store_center/" data-id="cje5gkn9900005wttwjtjnrs7" class="article-share-link">Share</a>
       
       
     </footer>
