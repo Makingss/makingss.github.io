@@ -45,7 +45,7 @@ update_time:’2017.08.09’
 
 
 会员中心">
-<meta property="og:updated_time" content="2018-03-08T03:06:43.200Z">
+<meta property="og:updated_time" content="2018-03-09T02:37:46.183Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="member_center">
 <meta name="twitter:description" content="文档说明
@@ -153,7 +153,7 @@ update_time:’2017.08.09’
 <p>update_time:’2017.08.09’</p>
 </blockquote>
 <hr>
-<h5 id="会员中心"><a href="#会员中心" class="headerlink" title="会员中心"></a>会员中心</h5><p><strong> 个人信息 </strong></p>
+<h5 id="会员中心"><a href="#会员中心" class="headerlink" title="会员中心"></a>会员中心</h5><p><strong> 会员基础信息 </strong></p>
 <blockquote>
 <p>api_name: api/pc/member<br>type:GET</p>
 </blockquote>
@@ -274,16 +274,392 @@ update_time:’2017.08.09’
 <td style="text-align:left">-</td>
 <td style="text-align:left">登录记录日志</td>
 </tr>
+<tr>
+<td>sign_in_logs.*.addon</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">登录日志扩展字段</td>
+</tr>
+<tr>
+<td>sign_in_logs.*.addon.device</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">设备信息</td>
+</tr>
+<tr>
+<td>sign_in_logs.*.addon.device.address</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">设备地址信息；包含国家、省、市、区、宽带运营商</td>
+</tr>
+<tr>
+<td>sign_in_logs.*.addon.device.client</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“Windows 10—Chrome(64.0.3282.186)”</td>
+<td style="text-align:left">用户访问的设备名称以及版本号</td>
+</tr>
+<tr>
+<td>sign_in_logs.*.addon.device.ip</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“127.0.0.1”</td>
+<td style="text-align:left">IP地址</td>
+</tr>
+<tr>
+<td>order</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">订单信息</td>
+</tr>
+<tr>
+<td>pendingPayment</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">待付款</td>
+</tr>
+<tr>
+<td>pendingShip</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">待发货</td>
+</tr>
+<tr>
+<td>pendingReceived</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">待收货</td>
+</tr>
+<tr>
+<td>pendingEvaluation</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">待评价</td>
+</tr>
+<tr>
+<td>afterSale</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“0”</td>
+<td style="text-align:left">售后</td>
+</tr>
+<tr>
+<td>member</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">会员收藏记录信息</td>
+</tr>
+<tr>
+<td>goods</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">收藏商品数量</td>
+</tr>
+<tr>
+<td>content</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">收藏文章数量</td>
+</tr>
+<tr>
+<td>history</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">浏览商品数量</td>
+</tr>
 </tbody>
 </table>
-<p>| sign_in_logs.<em>.addon | array | Y | - | 登录日志扩展字段 |<br>| sign_in_logs.</em>.addon.device | array | Y | - | 设备信息 |<br>| sign_in_logs.<em>.addon.device.address | array | Y | - | 设备地址信息；包含国家、省、市、区、宽带运营商 |<br>| sign_in_logs.</em>.addon.device.client | string | Y | “Windows 10—Chrome(64.0.3282.186)” | 用户访问的设备名称以及版本号 |<br>| sign_in_logs.*.addon.device.ip | string | Y | “127.0.0.1” | IP地址 |</p>
-<p>| order | array | Y | - | 订单信息 |<br>| pendingPayment | int | Y | 0 | 待付款 |<br>| pendingShip | int | Y | 0 | 待发货 |<br>| pendingReceived | int | Y | 0 | 待收货 |<br>| pendingEvaluation | int | Y | 0 | 待评价 |<br>| afterSale | string | Y | “0” | 售后 |</p>
-<p>| member | string | Y | “0” | 发货状态,’0’:未支付;’1’:已支付 |<br>| goods | string | Y | “0” | 发货状态,’0’:未支付;’1’:已支付 |<br>| content | string | Y | “0” | 发货状态,’0’:未支付;’1’:已支付 |<br>| history | string | Y | “0” | 发货状态,’0’:未支付;’1’:已支付 |</p>
-
+<p><strong> 订单和足迹信息 </strong></p>
+<blockquote>
+<p>api_name: api/pc/member_order_list<br>type:GET</p>
+</blockquote>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"status"</span>: <span class="string">"success"</span>,</div><div class="line">    <span class="attr">"code"</span>: <span class="number">200</span>,</div><div class="line">    <span class="attr">"message"</span>: <span class="literal">null</span>,</div><div class="line">    <span class="attr">"modul"</span>: <span class="string">"Message"</span>,</div><div class="line">    <span class="attr">"data"</span>: &#123;</div><div class="line">        <span class="attr">"order"</span>: [</div><div class="line">            &#123;</div><div class="line">                <span class="attr">"id"</span>: <span class="number">19</span>,</div><div class="line">                <span class="attr">"order_no"</span>: <span class="string">"180307114343399"</span>,</div><div class="line">                <span class="attr">"total_amount"</span>: <span class="string">"0.00"</span>,</div><div class="line">                <span class="attr">"pay_status"</span>: <span class="number">0</span>,</div><div class="line">                <span class="attr">"ship_status"</span>: <span class="number">0</span>,</div><div class="line">                <span class="attr">"ship_name"</span>: <span class="string">"彭勃"</span>,</div><div class="line">                <span class="attr">"created_at"</span>: <span class="string">"2018-03-07 11:43:43"</span>,</div><div class="line">                <span class="attr">"payed"</span>: <span class="literal">null</span>,</div><div class="line">                <span class="attr">"status"</span>: <span class="string">"active"</span>,</div><div class="line">                <span class="attr">"received_status"</span>: <span class="literal">null</span>,</div><div class="line">                <span class="attr">"order_items"</span>: [</div><div class="line">                    &#123;</div><div class="line">                        <span class="attr">"goods_id"</span>: <span class="number">1</span>,</div><div class="line">                        <span class="attr">"obj_id"</span>: <span class="number">60</span>,</div><div class="line">                        <span class="attr">"name"</span>: <span class="string">"YINER音儿2017冬新款中长款纯羊毛双面呢大衣女8C57580330"</span>,</div><div class="line">                        <span class="attr">"order_id"</span>: <span class="number">19</span>,</div><div class="line">                        <span class="attr">"order_item_no"</span>: <span class="string">"180307114344366"</span>,</div><div class="line">                        <span class="attr">"is_aftersale"</span>: <span class="literal">null</span>,</div><div class="line">                        <span class="attr">"send_status"</span>: <span class="number">0</span>,</div><div class="line">                        <span class="attr">"is_sync"</span>: <span class="number">0</span>,</div><div class="line">                        <span class="attr">"addon"</span>: [</div><div class="line">                            &#123;</div><div class="line">                                <span class="attr">"product_id"</span>: <span class="number">9</span>,</div><div class="line">                                <span class="attr">"spec_id"</span>: <span class="number">1</span>,</div><div class="line">                                <span class="attr">"spec_name"</span>: <span class="string">"颜色"</span>,</div><div class="line">                                <span class="attr">"spec_value_id"</span>: <span class="number">10</span>,</div><div class="line">                                <span class="attr">"spec_value"</span>: <span class="string">"绿色"</span>,</div><div class="line">                                <span class="attr">"spec_image"</span>: <span class="string">"1111"</span>,</div><div class="line">                                <span class="attr">"alias"</span>: <span class="string">"green"</span></div><div class="line">                            &#125;,</div><div class="line">                            &#123;</div><div class="line">                                <span class="attr">"product_id"</span>: <span class="number">9</span>,</div><div class="line">                                <span class="attr">"spec_id"</span>: <span class="number">2</span>,</div><div class="line">                                <span class="attr">"spec_name"</span>: <span class="string">"尺码"</span>,</div><div class="line">                                <span class="attr">"spec_value_id"</span>: <span class="number">2</span>,</div><div class="line">                                <span class="attr">"spec_value"</span>: <span class="string">"36"</span>,</div><div class="line">                                <span class="attr">"spec_image"</span>: <span class="string">"1111"</span>,</div><div class="line">                                <span class="attr">"alias"</span>: <span class="string">"36"</span></div><div class="line">                            &#125;</div><div class="line">                        ],</div><div class="line">                        <span class="attr">"order_objects"</span>: &#123;</div><div class="line">                            <span class="attr">"img_url"</span>: <span class="string">"/storage/images/goods/list/2P36RtQDVgpAuJIa0Z5xj1itEyqF5DRXUvCySGYU.jpeg"</span>,</div><div class="line">                            <span class="attr">"goods_id"</span>: <span class="number">1</span>,</div><div class="line">                            <span class="attr">"order_id"</span>: <span class="number">19</span></div><div class="line">                        &#125;</div><div class="line">                    &#125;</div><div class="line">                ]</div><div class="line">            &#125;</div><div class="line">        ],</div><div class="line">        <span class="attr">"foot_print"</span>: [</div><div class="line">            &#123;</div><div class="line">                <span class="attr">"id"</span>: <span class="number">1</span>,</div><div class="line">                <span class="attr">"image_default_id"</span>: <span class="number">17</span>,</div><div class="line">                <span class="attr">"bn"</span>: <span class="string">"8C57580330"</span>,</div><div class="line">                <span class="attr">"name"</span>: <span class="string">"YINER音儿2017冬新款中长款纯羊毛双面呢大衣女8C57580330--"</span>,</div><div class="line">                <span class="attr">"default_images"</span>: &#123;</div><div class="line">                    <span class="attr">"storage"</span>: <span class="string">"image"</span>,</div><div class="line">                    <span class="attr">"url"</span>: <span class="string">"/storage/images/goods/list/2P36RtQDVgpAuJIa0Z5xj1itEyqF5DRXUvCySGYU.jpeg"</span>,</div><div class="line">                    <span class="attr">"watermark"</span>: <span class="number">0</span>,</div><div class="line">                    <span class="attr">"build_size"</span>: <span class="string">"235806"</span>,</div><div class="line">                    <span class="attr">"created_at"</span>: <span class="string">"2018-02-08 13:38:20"</span>,</div><div class="line">                    <span class="attr">"updated_at"</span>: <span class="string">"2018-02-08 13:38:20"</span>,</div><div class="line">                    <span class="attr">"extension"</span>: <span class="string">"jpeg"</span></div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        ]</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th style="text-align:left">类型/长度</th>
+<th style="text-align:left">非必须</th>
+<th style="text-align:left">事例</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>status</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">success</td>
+<td style="text-align:left">接口返回状态</td>
+</tr>
+<tr>
+<td>code</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">返回状态码</td>
+</tr>
+<tr>
+<td>message</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">null</td>
+<td style="text-align:left">接口反馈信息</td>
+</tr>
+<tr>
+<td>modul</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“Message”</td>
+<td style="text-align:left">模型信息</td>
+</tr>
+<tr>
+<td>data</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">接口数据</td>
+</tr>
+<tr>
+<td>id</td>
+<td style="text-align:left">intger</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">订单ID</td>
+</tr>
+<tr>
+<td>order_no</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">180307114612257</td>
+<td style="text-align:left">订单编号</td>
+</tr>
+<tr>
+<td>total_amount</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">10.03</td>
+<td style="text-align:left">订单支付金额</td>
+</tr>
+<tr>
+<td>pay_status</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">支付状态 0：未支付 1 已支付</td>
+</tr>
+<tr>
+<td>ship_status</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">发货状态 0:为发货</td>
+</tr>
+<tr>
+<td>ship_name</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">小伙子</td>
+<td style="text-align:left">收货人名称</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">2018-03-07 11:46:12</td>
+<td style="text-align:left">创建订单时间</td>
+</tr>
+<tr>
+<td>payed</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">100.00</td>
+<td style="text-align:left">实际支付金额</td>
+</tr>
+<tr>
+<td>status</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">“active”</td>
+<td style="text-align:left">订单状态 active:有效 dead：作废</td>
+</tr>
+<tr>
+<td>received_status</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">收货状态 0:未收货 1:已收货</td>
+</tr>
+<tr>
+<td>order_items</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">订单明细数据</td>
+</tr>
+<tr>
+<td>goods_id</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">商品ID</td>
+</tr>
+<tr>
+<td>name</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">YINER音儿2017冬新款中长款纯羊毛双面呢大衣女8C57580330</td>
+<td style="text-align:left">商品名称</td>
+</tr>
+<tr>
+<td>order_id</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">21</td>
+<td style="text-align:left">订单ID</td>
+</tr>
+<tr>
+<td>order_item_no</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">180307114638960</td>
+<td style="text-align:left">订单明细编号</td>
+</tr>
+<tr>
+<td>is_aftersale</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">是否申请售后，0:未申请售后 1:已申请售后</td>
+</tr>
+<tr>
+<td>send_status</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">是否发货，0:未发货 1:已发货</td>
+</tr>
+<tr>
+<td>is_sync</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">是否同步第三方平台，0:未同步 1:已同步</td>
+</tr>
+<tr>
+<td>addon</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">扩展字段</td>
+</tr>
+<tr>
+<td>product_id</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">9</td>
+<td style="text-align:left">产品ID</td>
+</tr>
+<tr>
+<td>spec_id</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">规格ID</td>
+</tr>
+<tr>
+<td>spec_name</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">颜色</td>
+<td style="text-align:left">规格名称</td>
+</tr>
+<tr>
+<td>spec_value_id</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left">规格值ID</td>
+</tr>
+<tr>
+<td>spec_value</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">规格值</td>
+</tr>
+<tr>
+<td>spec_image</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">dev.app.com</td>
+<td style="text-align:left">规格图片</td>
+</tr>
+<tr>
+<td>alias</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">green</td>
+<td style="text-align:left">规格别名</td>
+</tr>
+<tr>
+<td>spec_image</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">扩展字段</td>
+</tr>
+<tr>
+<td>alias</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">9</td>
+<td style="text-align:left">产品ID</td>
+</tr>
+</tbody>
+</table>
+<p> order_objects | array | Y | - | 订单对象 |<br>| img_url | int | Y | 9 | 商品的快照图 |<br>| goods_id | int | Y | 1 | 商品ID |<br>| order_id | int | Y | 21 | 订单ID |<br>| foot_print | array | Y | - | 用户足迹数据 |<br>| id | int | Y | 1 | 足迹数据ID |<br>| image_default_id | int | Y | 21 | 图片ID |<br>| bn | string | Y | 8C57580330 | 图片ID |<br>| name | string | Y | YINER音儿2017冬新款中长款纯羊毛双面呢大衣女8C57580330 | 商品名称 |<br>| default_images | array | Y | - | 图片数据 |<br>| storage | string | image | Y | 图片存储引擎 |<br>| url | string | dev.app.com | Y | 图片路径 |<br>| extension | string | jpeg | Y | 图片格式 |</p>
+<p><strong> 会员中心订单详情 </strong></p>
+<blockquote>
+<p>api_name: api/pc/order_detail?order_no=<br>type:GET</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th style="text-align:left">类型/长度</th>
+<th style="text-align:left">非必须</th>
+<th style="text-align:left">事例</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>order_no</td>
+<td style="text-align:left">int(11)</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">180307114612257</td>
+<td style="text-align:left">订单</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/08/member_center/" data-id="cjehxlf7z0002yottndchv2h4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/03/08/member_center/" data-id="cjejc05d90001w0tt661y5b6j" class="article-share-link">Share</a>
       
       
     </footer>
