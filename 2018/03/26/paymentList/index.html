@@ -45,7 +45,7 @@ update_time:’2017.08.09’
 
 
 获取支付">
-<meta property="og:updated_time" content="2018-03-27T03:45:24.997Z">
+<meta property="og:updated_time" content="2018-03-28T07:22:32.012Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="paymentList">
 <meta name="twitter:description" content="文档说明
@@ -319,11 +319,11 @@ update_time:’2017.08.09’
 </tr>
 </tbody>
 </table>
-<h5 id="获取支付单列表-1"><a href="#获取支付单列表-1" class="headerlink" title="获取支付单列表"></a>获取支付单列表</h5><ul>
-<li>订单列表</li>
+<h5 id="获取支付单明细"><a href="#获取支付单明细" class="headerlink" title="获取支付单明细"></a>获取支付单明细</h5><ul>
+<li>订单列表明细</li>
 </ul>
 <blockquote>
-<p>api_name：/api/pay_list<br>type：GET</p>
+<p>api_name：/api/pay_list/1803160318400000000231<br>type：GET</p>
 </blockquote>
 <table>
 <thead>
@@ -337,29 +337,15 @@ update_time:’2017.08.09’
 </thead>
 <tbody>
 <tr>
-<td>page</td>
+<td>{payment_id}</td>
 <td style="text-align:center">intger</td>
 <td style="text-align:left">N</td>
-<td style="text-align:center">1</td>
-<td style="text-align:right">页数，默认为第一页数据</td>
-</tr>
-<tr>
-<td>paginate</td>
-<td style="text-align:center">intger</td>
-<td style="text-align:left">N</td>
-<td style="text-align:center">10</td>
-<td style="text-align:right">取数量,默认10个</td>
-</tr>
-<tr>
-<td>type</td>
-<td style="text-align:center">tinyint</td>
-<td style="text-align:left">N</td>
-<td style="text-align:center">1</td>
-<td style="text-align:right">支付类型筛选 默认为1。1全部，2成功，3失败</td>
+<td style="text-align:center">1803160318400000000231</td>
+<td style="text-align:right">支付单号</td>
 </tr>
 </tbody>
 </table>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"data"</span>: [</div><div class="line">        &#123;</div><div class="line">            <span class="attr">"id"</span>: <span class="number">3</span>,</div><div class="line">            <span class="attr">"payment_id"</span>: <span class="string">"1803140547440000000211"</span>,</div><div class="line">            <span class="attr">"money"</span>: <span class="string">"0.01"</span>,</div><div class="line">            <span class="attr">"cur_money"</span>: <span class="string">"0.01"</span>,</div><div class="line">            <span class="attr">"mmeber_id"</span>: <span class="number">5</span>,</div><div class="line">            <span class="attr">"status"</span>: <span class="string">"succ"</span>,</div><div class="line">            <span class="attr">"pay_name"</span>: <span class="string">"支付宝电脑网站支付"</span>,</div><div class="line">            <span class="attr">"pay_type"</span>: <span class="string">"AliAopPay"</span>,</div><div class="line">            <span class="attr">"t_payed"</span>: <span class="string">"2018-03-14 17:48:01"</span>,</div><div class="line">            <span class="attr">"op_id"</span>: <span class="number">5</span>,</div><div class="line">            <span class="attr">"payment_bn"</span>: <span class="string">""</span>,</div><div class="line">            <span class="attr">"account"</span>: <span class="string">""</span>,</div><div class="line">            <span class="attr">"bank"</span>: <span class="string">""</span>,</div><div class="line">            <span class="attr">"pay_account"</span>: <span class="string">""</span>,</div><div class="line">            <span class="attr">"currency"</span>: <span class="string">"CNY"</span>,</div><div class="line">            <span class="attr">"pay_source"</span>: [</div><div class="line">                &#123;</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"0.01"</span>,</div><div class="line">                    <span class="attr">"source"</span>: <span class="string">"支付宝余额"</span></div><div class="line">                &#125;</div><div class="line">            ],</div><div class="line">            <span class="attr">"paycost"</span>: <span class="string">"0.00"</span>,</div><div class="line">            <span class="attr">"pay_app_id"</span>: <span class="string">"AliAopPay"</span>,</div><div class="line">            <span class="attr">"pay_ver"</span>: <span class="string">"1.0"</span>,</div><div class="line">            <span class="attr">"ip"</span>: <span class="string">"127.0.0.1"</span>,</div><div class="line">            <span class="attr">"t_begin"</span>: <span class="string">"2018-03-14 17:42:23"</span>,</div><div class="line">            <span class="attr">"t_confirm"</span>: <span class="string">"2018-03-14 17:47:52"</span>,</div><div class="line">            <span class="attr">"memo"</span>: <span class="string">""</span>,</div><div class="line">            <span class="attr">"return_url"</span>: <span class="string">""</span>,</div><div class="line">            <span class="attr">"disabled"</span>: <span class="number">1</span>,</div><div class="line">            <span class="attr">"trade_no"</span>: <span class="string">"2018031421001004770532765571"</span>,</div><div class="line">            <span class="attr">"thirdparty_account"</span>: <span class="string">"2088702036777775"</span>,</div><div class="line">            <span class="attr">"created_at"</span>: <span class="string">"2018-03-14 17:42:23"</span>,</div><div class="line">            <span class="attr">"updated_at"</span>: <span class="string">"2018-03-26 14:44:29"</span>,</div><div class="line">            <span class="attr">"payment_bills"</span>: [</div><div class="line">                &#123;</div><div class="line">                    <span class="attr">"id"</span>: <span class="number">2</span>,</div><div class="line">                    <span class="attr">"billable_id"</span>: <span class="number">3</span>,</div><div class="line">                    <span class="attr">"pay_object"</span>: <span class="number">0</span>,</div><div class="line">                    <span class="attr">"bill_id"</span>: <span class="string">"1803140547440000000211"</span>,</div><div class="line">                    <span class="attr">"order_no"</span>: <span class="string">"180314030531021"</span>,</div><div class="line">                    <span class="attr">"money"</span>: <span class="string">"0.01"</span>,</div><div class="line">                    <span class="attr">"prepay_id"</span>: <span class="literal">null</span>,</div><div class="line">                    <span class="attr">"created_at"</span>: <span class="string">"2018-03-14 17:42:23"</span>,</div><div class="line">                    <span class="attr">"updated_at"</span>: <span class="string">"2018-03-14 17:42:23"</span>,</div><div class="line">                    <span class="attr">"pay_type"</span>: <span class="literal">null</span>,</div><div class="line">                    <span class="attr">"order_id"</span>: <span class="number">39</span></div><div class="line">                &#125;</div><div class="line">            ]</div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            <span class="attr">"id"</span>: <span class="number">4</span>,</div><div class="line">            <span class="attr">"payment_id"</span>: <span class="string">"1803160318400000000231"</span>,</div><div class="line">            <span class="attr">"money"</span>: <span class="string">"0.01"</span>,</div><div class="line">            <span class="attr">"cur_money"</span>: <span class="string">"0.01"</span>,</div><div class="line">            <span class="attr">"mmeber_id"</span>: <span class="number">5</span>,</div><div class="line">            <span class="attr">"status"</span>: <span class="string">"progress"</span>,</div><div class="line">            <span class="attr">"pay_name"</span>: <span class="string">"微信支付-扫码"</span>,</div><div class="line">            <span class="attr">"pay_type"</span>: <span class="string">"WeixiNativePay"</span>,</div><div class="line">            <span class="attr">"t_payed"</span>: <span class="string">"0000-00-00 00:00:00"</span>,</div><div class="line">            <span class="attr">"op_id"</span>: <span class="number">5</span>,</div><div class="line">            <span class="attr">"payment_bn"</span>: <span class="string">""</span>,</div><div class="line">            <span class="attr">"account"</span>: <span class="string">""</span>,</div><div class="line">            <span class="attr">"bank"</span>: <span class="string">""</span>,</div><div class="line">            <span class="attr">"pay_account"</span>: <span class="string">""</span>,</div><div class="line">            <span class="attr">"currency"</span>: <span class="string">"CNY"</span>,</div><div class="line">            <span class="attr">"pay_source"</span>: <span class="literal">null</span>,</div><div class="line">            <span class="attr">"paycost"</span>: <span class="string">"0.00"</span>,</div><div class="line">            <span class="attr">"pay_app_id"</span>: <span class="string">"WeixiNativePay"</span>,</div><div class="line">            <span class="attr">"pay_ver"</span>: <span class="string">"1.0"</span>,</div><div class="line">            <span class="attr">"ip"</span>: <span class="string">"127.0.0.1"</span>,</div><div class="line">            <span class="attr">"t_begin"</span>: <span class="string">"2018-03-16 15:18:40"</span>,</div><div class="line">            <span class="attr">"t_confirm"</span>: <span class="string">"0000-00-00 00:00:00"</span>,</div><div class="line">            <span class="attr">"memo"</span>: <span class="string">""</span>,</div><div class="line">            <span class="attr">"return_url"</span>: <span class="string">""</span>,</div><div class="line">            <span class="attr">"disabled"</span>: <span class="number">1</span>,</div><div class="line">            <span class="attr">"trade_no"</span>: <span class="string">""</span>,</div><div class="line">            <span class="attr">"thirdparty_account"</span>: <span class="string">""</span>,</div><div class="line">            <span class="attr">"created_at"</span>: <span class="string">"2018-03-16 15:18:40"</span>,</div><div class="line">            <span class="attr">"updated_at"</span>: <span class="string">"2018-03-16 15:18:40"</span>,</div><div class="line">            <span class="attr">"payment_bills"</span>: [</div><div class="line">                &#123;</div><div class="line">                    <span class="attr">"id"</span>: <span class="number">3</span>,</div><div class="line">                    <span class="attr">"billable_id"</span>: <span class="number">4</span>,</div><div class="line">                    <span class="attr">"pay_object"</span>: <span class="number">0</span>,</div><div class="line">                    <span class="attr">"bill_id"</span>: <span class="string">"1803160318400000000231"</span>,</div><div class="line">                    <span class="attr">"order_no"</span>: <span class="string">"180316031838482"</span>,</div><div class="line">                    <span class="attr">"money"</span>: <span class="string">"0.01"</span>,</div><div class="line">                    <span class="attr">"prepay_id"</span>: <span class="literal">null</span>,</div><div class="line">                    <span class="attr">"created_at"</span>: <span class="string">"2018-03-16 15:18:41"</span>,</div><div class="line">                    <span class="attr">"updated_at"</span>: <span class="string">"2018-03-16 15:18:41"</span>,</div><div class="line">                    <span class="attr">"pay_type"</span>: <span class="literal">null</span>,</div><div class="line">                    <span class="attr">"order_id"</span>: <span class="number">40</span></div><div class="line">                &#125;</div><div class="line">            ]</div><div class="line">        &#125;</div><div class="line">    ],</div><div class="line">    <span class="attr">"links"</span>: &#123;</div><div class="line">        <span class="attr">"first"</span>: <span class="string">"http://app.com/api/pay_list?page=1"</span>,</div><div class="line">        <span class="attr">"last"</span>: <span class="string">"http://app.com/api/pay_list?page=5"</span>,</div><div class="line">        <span class="attr">"prev"</span>: <span class="string">"http://app.com/api/pay_list?page=1"</span>,</div><div class="line">        <span class="attr">"next"</span>: <span class="string">"http://app.com/api/pay_list?page=3"</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">"meta"</span>: &#123;</div><div class="line">        <span class="attr">"current_page"</span>: <span class="number">2</span>,</div><div class="line">        <span class="attr">"from"</span>: <span class="number">3</span>,</div><div class="line">        <span class="attr">"last_page"</span>: <span class="number">5</span>,</div><div class="line">        <span class="attr">"path"</span>: <span class="string">"http://app.com/api/pay_list"</span>,</div><div class="line">        <span class="attr">"per_page"</span>: <span class="number">2</span>,</div><div class="line">        <span class="attr">"to"</span>: <span class="number">4</span>,</div><div class="line">        <span class="attr">"total"</span>: <span class="number">9</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">"type"</span>: <span class="number">1</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"status"</span>: <span class="string">"success"</span>,</div><div class="line">    <span class="attr">"code"</span>: <span class="number">200</span>,</div><div class="line">    <span class="attr">"message"</span>: <span class="literal">null</span>,</div><div class="line">    <span class="attr">"modul"</span>: <span class="string">"Message"</span>,</div><div class="line">    <span class="attr">"data"</span>: &#123;</div><div class="line">        <span class="attr">"id"</span>: <span class="number">9</span>,</div><div class="line">        <span class="attr">"payment_id"</span>: <span class="string">"1803190434150000000940"</span>,</div><div class="line">        <span class="attr">"money"</span>: <span class="string">"0.01"</span>,</div><div class="line">        <span class="attr">"cur_money"</span>: <span class="string">"0.01"</span>,</div><div class="line">        <span class="attr">"status"</span>: <span class="string">"succ"</span>,</div><div class="line">        <span class="attr">"pay_name"</span>: <span class="string">"微信支付-扫码"</span>,</div><div class="line">        <span class="attr">"pay_type"</span>: <span class="string">"WeixiNativePay"</span>,</div><div class="line">        <span class="attr">"t_payed"</span>: <span class="string">"2018-03-19 16:34:23"</span>,</div><div class="line">        <span class="attr">"op_id"</span>: <span class="number">5</span>,</div><div class="line">        <span class="attr">"payment_bn"</span>: <span class="string">""</span>,</div><div class="line">        <span class="attr">"account"</span>: <span class="string">""</span>,</div><div class="line">        <span class="attr">"bank"</span>: <span class="string">""</span>,</div><div class="line">        <span class="attr">"pay_account"</span>: <span class="string">""</span>,</div><div class="line">        <span class="attr">"currency"</span>: <span class="string">"CNY"</span>,</div><div class="line">        <span class="attr">"pay_source"</span>: [</div><div class="line">            &#123;</div><div class="line">                <span class="attr">"amount"</span>: <span class="string">"0.01"</span>,</div><div class="line">                <span class="attr">"source"</span>: <span class="string">"零钱"</span></div><div class="line">            &#125;</div><div class="line">        ],</div><div class="line">        <span class="attr">"paycost"</span>: <span class="string">"0.00"</span>,</div><div class="line">        <span class="attr">"pay_app_id"</span>: <span class="string">"WeixiNativePay"</span>,</div><div class="line">        <span class="attr">"pay_ver"</span>: <span class="string">"1.0"</span>,</div><div class="line">        <span class="attr">"ip"</span>: <span class="string">"127.0.0.1"</span>,</div><div class="line">        <span class="attr">"t_begin"</span>: <span class="string">"2018-03-19 16:34:15"</span>,</div><div class="line">        <span class="attr">"t_confirm"</span>: <span class="string">"2018-03-21 11:44:26"</span>,</div><div class="line">        <span class="attr">"memo"</span>: <span class="string">""</span>,</div><div class="line">        <span class="attr">"return_url"</span>: <span class="string">""</span>,</div><div class="line">        <span class="attr">"disabled"</span>: <span class="number">1</span>,</div><div class="line">        <span class="attr">"trade_no"</span>: <span class="string">"4200000080201803191603013559"</span>,</div><div class="line">        <span class="attr">"thirdparty_account"</span>: <span class="string">"oBx5CwLR52axEg3J7F4G8UGokXiE"</span>,</div><div class="line">        <span class="attr">"created_at"</span>: <span class="string">"2018-03-19 16:34:15"</span>,</div><div class="line">        <span class="attr">"updated_at"</span>: <span class="string">"2018-03-21 11:44:26"</span>,</div><div class="line">        <span class="attr">"payment_bills"</span>: [</div><div class="line">            &#123;</div><div class="line">                <span class="attr">"pay_object"</span>: <span class="number">0</span>,</div><div class="line">                <span class="attr">"bill_id"</span>: <span class="string">"1803190434150000000940"</span>,</div><div class="line">                <span class="attr">"order_no"</span>: <span class="string">"180319043410513"</span>,</div><div class="line">                <span class="attr">"money"</span>: <span class="string">"0.01"</span>,</div><div class="line">                <span class="attr">"prepay_id"</span>: <span class="literal">null</span>,</div><div class="line">                <span class="attr">"created_at"</span>: <span class="string">"2018-03-19 16:34:15"</span>,</div><div class="line">                <span class="attr">"updated_at"</span>: <span class="string">"2018-03-19 16:34:16"</span>,</div><div class="line">                <span class="attr">"pay_type"</span>: <span class="literal">null</span>,</div><div class="line">                <span class="attr">"order_id"</span>: <span class="number">45</span></div><div class="line">            &#125;</div><div class="line">        ]</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -588,13 +574,133 @@ update_time:’2017.08.09’
 <td style="text-align:center">-</td>
 <td style="text-align:center">支付关系数据</td>
 </tr>
+<tr>
+<td style="text-align:center">bill_id</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:center">1803190434150000000940</td>
+<td style="text-align:center">支付单号</td>
+</tr>
+<tr>
+<td style="text-align:center">order_no</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:center">180319043410513</td>
+<td style="text-align:center">订单编号</td>
+</tr>
+<tr>
+<td style="text-align:center">money</td>
+<td style="text-align:center">decimal</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">支付关系数据</td>
+</tr>
+<tr>
+<td style="text-align:center">created_at</td>
+<td style="text-align:center">datetime</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">支付关系数据</td>
+</tr>
+<tr>
+<td style="text-align:center">updated_at</td>
+<td style="text-align:center">datetime</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">支付关系数据</td>
+</tr>
 </tbody>
 </table>
-
+<h5 id="搜索支付单"><a href="#搜索支付单" class="headerlink" title="搜索支付单"></a>搜索支付单</h5><ul>
+<li>搜索支付单</li>
+</ul>
+<blockquote>
+<p>api_name：/api/pay_list/filter<br>type：GET</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:left">是否必填</th>
+<th style="text-align:center">实例</th>
+<th style="text-align:right">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>page</td>
+<td style="text-align:center">intger</td>
+<td style="text-align:left">N</td>
+<td style="text-align:center">1</td>
+<td style="text-align:right">页数，默认为第一页数据</td>
+</tr>
+<tr>
+<td>limit</td>
+<td style="text-align:center">intger</td>
+<td style="text-align:left">N</td>
+<td style="text-align:center">10</td>
+<td style="text-align:right">取数量,默认10个</td>
+</tr>
+<tr>
+<td>type</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">N</td>
+<td style="text-align:center">all</td>
+<td style="text-align:right">支付类型筛选 默认为all。all全部，succ成功，failed失败</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>type:post</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:left">是否必填</th>
+<th style="text-align:center">实例</th>
+<th style="text-align:right">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>order_no</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">N</td>
+<td style="text-align:center">180314030531021</td>
+<td style="text-align:right">订单编号</td>
+</tr>
+<tr>
+<td>bill_id</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">N</td>
+<td style="text-align:center">1803140547440000000212</td>
+<td style="text-align:right">支付单号</td>
+</tr>
+<tr>
+<td>trade_no</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">N</td>
+<td style="text-align:center">4200000069201803169646229021</td>
+<td style="text-align:right">第三方平台单号</td>
+</tr>
+<tr>
+<td>op_id</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">N</td>
+<td style="text-align:center">1</td>
+<td style="text-align:right">操作人ID</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"data"</span>: [</div><div class="line">        &#123;</div><div class="line">            <span class="attr">"id"</span>: <span class="number">1</span>,</div><div class="line">            <span class="attr">"payment_id"</span>: <span class="string">"1803140547440000000212"</span>,</div><div class="line">            <span class="attr">"money"</span>: <span class="string">"0.01"</span>,</div><div class="line">            <span class="attr">"status"</span>: <span class="string">"progress"</span>,</div><div class="line">            <span class="attr">"pay_type"</span>: <span class="string">"AliAopPay"</span>,</div><div class="line">            <span class="attr">"t_payed"</span>: <span class="string">"0000-00-00 00:00:00"</span>,</div><div class="line">            <span class="attr">"t_begin"</span>: <span class="string">"2018-03-14 17:41:55"</span>,</div><div class="line">            <span class="attr">"updated_at"</span>: <span class="string">"2018-03-14 17:41:55"</span>,</div><div class="line">            <span class="attr">"op_id"</span>: <span class="number">5</span>,</div><div class="line">            <span class="attr">"pay_app_id"</span>: <span class="string">"AliAopPay"</span>,</div><div class="line">            <span class="attr">"pay_name"</span>: <span class="string">"支付宝电脑网站支付"</span>,</div><div class="line">            <span class="attr">"payment_bills"</span>: [</div><div class="line">                &#123;</div><div class="line">                    <span class="attr">"pay_object"</span>: <span class="number">0</span>,</div><div class="line">                    <span class="attr">"bill_id"</span>: <span class="string">"1803140547440000000212"</span>,</div><div class="line">                    <span class="attr">"order_no"</span>: <span class="string">"180314030531021"</span>,</div><div class="line">                    <span class="attr">"money"</span>: <span class="string">"0.01"</span>,</div><div class="line">                    <span class="attr">"prepay_id"</span>: <span class="literal">null</span>,</div><div class="line">                    <span class="attr">"created_at"</span>: <span class="string">"2018-03-14 17:42:23"</span>,</div><div class="line">                    <span class="attr">"updated_at"</span>: <span class="string">"2018-03-14 17:42:23"</span>,</div><div class="line">                    <span class="attr">"pay_type"</span>: <span class="literal">null</span>,</div><div class="line">                    <span class="attr">"order_id"</span>: <span class="number">38</span></div><div class="line">                &#125;</div><div class="line">            ]</div><div class="line">        &#125;</div><div class="line">    ],</div><div class="line">    <span class="attr">"links"</span>: &#123;</div><div class="line">        <span class="attr">"first"</span>: <span class="string">"http://dev.app.com/api/pay_list/filter?page=1"</span>,</div><div class="line">        <span class="attr">"last"</span>: <span class="string">"http://dev.app.com/api/pay_list/filter?page=2"</span>,</div><div class="line">        <span class="attr">"prev"</span>: <span class="literal">null</span>,</div><div class="line">        <span class="attr">"next"</span>: <span class="string">"http://dev.app.com/api/pay_list/filter?page=2"</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">"meta"</span>: &#123;</div><div class="line">        <span class="attr">"current_page"</span>: <span class="number">1</span>,</div><div class="line">        <span class="attr">"from"</span>: <span class="number">1</span>,</div><div class="line">        <span class="attr">"last_page"</span>: <span class="number">2</span>,</div><div class="line">        <span class="attr">"path"</span>: <span class="string">"http://dev.app.com/api/pay_list/filter"</span>,</div><div class="line">        <span class="attr">"per_page"</span>: <span class="number">1</span>,</div><div class="line">        <span class="attr">"to"</span>: <span class="number">1</span>,</div><div class="line">        <span class="attr">"total"</span>: <span class="number">2</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="与订单列表返回格式相同"><a href="#与订单列表返回格式相同" class="headerlink" title="与订单列表返回格式相同"></a>与订单列表返回格式相同</h4>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/26/paymentList/" data-id="cjf94c2pg0006vgttfcq6v8ic" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/03/26/paymentList/" data-id="cjfarj9kp0002ewtt4ijsmquh" class="article-share-link">Share</a>
       
       
     </footer>
