@@ -178,6 +178,13 @@ tags:
                 "payed": null,
                 "status": "active",
                 "received_status": null,
+                "order_cycle": {
+                    "id": 67,
+                    "order_id": 46,
+                    "content": "订单创建成功",
+                    "title": "提交订单",
+                    "status": "finish"
+                },
                 "order_items": [
                     {
                         "goods_id": 1,
@@ -285,10 +292,14 @@ tags:
 | storage | string | image | Y | 图片存储引擎 |
 | url | string | dev.app.com | Y | 图片路径 |
 | extension | string | jpeg | Y | 图片格式 |
-
+| order_cycle | array | - | Y | 订单状态 |
+| order_cycle.order_id | string | 45 | Y | 订单ID |
+| content | string | 订单创建成功 | Y | 订单状态描述 |
+| title | string | 提交订单 | Y | 周期抬头 |
+| status | string | finish | Y | 状态,值为wait、process、finish、error |
 ** 会员中心订单详情 **
 
-> api_name: api/pc/order_detail?order_no=
+> api_name: api/pc/member/order/{order_no}
 > type:GET
 
 | 字段名 | 类型/长度 | 非必须 | 事例 |备注 |
